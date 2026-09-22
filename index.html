@@ -1,0 +1,3085 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DZCouture — Mode, couture et vêtements modulables à Béjaïa</title>
+<meta name="description" content="DZCouture relie clientes, couturières, stylistes, fournisseurs et ateliers autour du vêtement modulable : une pièce, plusieurs styles. Béjaïa, Algérie.">
+<meta name="keywords" content="couture Béjaïa, mode Algérie, vêtements modulables, haute couture, sur mesure, styliste, couturière, garde-robe capsule">
+<meta name="author" content="DZCouture">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="./index.html">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="DZCouture">
+<meta property="og:title" content="DZCouture — Une pièce. Plusieurs styles.">
+<meta property="og:description" content="Plateforme de mode, couture et personnalisation à Béjaïa : vêtements modulables, couturières, stylistes, fournisseurs et ateliers.">
+<meta property="og:locale" content="fr_DZ">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="DZCouture — Une pièce. Plusieurs styles.">
+<meta name="twitter:description" content="Mode, couture et vêtements modulables à Béjaïa, Algérie.">
+<meta name="theme-color" content="#5A0F24">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%235A0F24'/%3E%3Cpath d='M9 22V10h5c4 0 6 2.4 6 6s-2 6-6 6H9z' fill='none' stroke='%23C9A227' stroke-width='2'/%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ClothingStore",
+  "name": "DZCouture",
+  "description": "Plateforme de mode, couture et personnalisation autour des vêtements modulables.",
+  "slogan": "Une pièce. Plusieurs styles. Votre élégance.",
+  "foundingDate": "2026",
+  "address": { "@type": "PostalAddress", "addressLocality": "Béjaïa", "addressCountry": "DZ" },
+  "telephone": "+213674508196",
+  "email": "imeloulmarina@gmail.com",
+  "areaServed": "Béjaïa, Algérie",
+  "priceRange": "$$"
+}
+</script>
+
+<style>
+/* ============================================================
+   DZCouture — Identité visuelle : GRENAT + GOLD
+   Toutes les couleurs sont pilotées par ces variables, elles-mêmes
+   surchargées au chargement par les réglages définis dans admin.html.
+   ============================================================ */
+:root{
+  --grenat:#5A0F24;
+  --grenat-dark:#3B0917;
+  --gold:#C9A227;
+  --gold-light:#E4C766;
+  --ivoire:#F8F4EC;
+  --noir:#171315;
+
+  --bg:var(--ivoire);
+  --text:var(--noir);
+  --btn:var(--grenat);
+  --btn-text:#F8F4EC;
+
+  --surface:#FFFFFF;
+  --surface-2:#FCFAF5;
+  --line:rgba(23,19,21,.10);
+  --line-gold:rgba(201,162,39,.35);
+  --muted:rgba(23,19,21,.62);
+  --shadow-sm:0 1px 2px rgba(23,19,21,.05), 0 6px 18px rgba(23,19,21,.05);
+  --shadow-md:0 2px 6px rgba(23,19,21,.06), 0 18px 46px rgba(23,19,21,.09);
+  --radius:14px;
+  --radius-lg:22px;
+  --serif:"Cormorant Garamond", Georgia, serif;
+  --sans:"Jost", "Helvetica Neue", Arial, sans-serif;
+  --maxw:1240px;
+  --header-h:76px;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--bg);color:var(--text);
+  font-family:var(--sans);font-weight:300;font-size:16px;line-height:1.65;
+  overflow-x:hidden;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font:inherit;color:inherit}
+h1,h2,h3,h4{font-family:var(--serif);font-weight:500;line-height:1.14;margin:0 0 .5em;letter-spacing:.01em}
+h1{font-size:clamp(2.4rem,5.6vw,4.3rem)}
+h2{font-size:clamp(1.9rem,3.6vw,2.9rem)}
+h3{font-size:clamp(1.25rem,2vw,1.55rem)}
+p{margin:0 0 1em}
+::selection{background:var(--gold);color:var(--grenat-dark)}
+
+.wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 24px}
+.section{padding:clamp(56px,8vw,110px) 0}
+.section--tight{padding:clamp(36px,5vw,64px) 0}
+.center{text-align:center}
+.muted{color:var(--muted)}
+.hidden{display:none !important}
+
+/* ---------- Eyebrow / titres ---------- */
+.eyebrow{
+  font-family:var(--sans);font-size:.72rem;letter-spacing:.34em;text-transform:uppercase;
+  color:var(--gold);font-weight:500;margin-bottom:14px;display:block
+}
+.rule{width:64px;height:1px;background:linear-gradient(90deg,var(--gold),transparent);margin:18px 0}
+.rule.center{margin:18px auto}
+.lead{font-size:1.06rem;color:var(--muted);max-width:62ch}
+.lead.center{margin-left:auto;margin-right:auto}
+
+/* ---------- Boutons ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.55em;
+  padding:.92em 1.9em;border-radius:999px;border:1px solid transparent;
+  font-size:.82rem;letter-spacing:.16em;text-transform:uppercase;font-weight:500;
+  cursor:pointer;transition:.28s cubic-bezier(.2,.7,.3,1);background:none;white-space:nowrap
+}
+.btn--primary{background:var(--btn);color:var(--btn-text);border-color:var(--btn)}
+.btn--primary:hover{background:var(--grenat-dark);border-color:var(--grenat-dark);transform:translateY(-1px);box-shadow:0 10px 26px rgba(90,15,36,.28)}
+.btn--gold{background:var(--gold);color:var(--grenat-dark);border-color:var(--gold)}
+.btn--gold:hover{background:var(--gold-light);transform:translateY(-1px);box-shadow:0 10px 26px rgba(201,162,39,.3)}
+.btn--ghost{border-color:var(--line-gold);color:var(--text)}
+.btn--ghost:hover{border-color:var(--gold);background:rgba(201,162,39,.08)}
+.btn--light{border-color:rgba(248,244,236,.45);color:var(--ivoire)}
+.btn--light:hover{background:rgba(248,244,236,.12);border-color:var(--gold)}
+.btn--sm{padding:.62em 1.25em;font-size:.72rem}
+.btn--block{width:100%}
+.btn[disabled]{opacity:.55;cursor:not-allowed;transform:none !important}
+
+/* ---------- Header ---------- */
+.header{
+  position:sticky;top:0;z-index:60;background:rgba(248,244,236,.86);
+  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--line);transition:.3s
+}
+.header.scrolled{background:rgba(248,244,236,.97);box-shadow:var(--shadow-sm)}
+.header__in{display:flex;align-items:center;gap:20px;height:var(--header-h)}
+.logo{display:flex;align-items:center;gap:12px;flex:0 0 auto}
+.logo svg{height:40px;width:auto;display:block}
+.logo__txt{display:flex;flex-direction:column;line-height:1}
+.logo__name{font-family:var(--serif);font-size:1.4rem;font-weight:600;letter-spacing:.06em;color:var(--grenat)}
+.logo__tag{font-size:.54rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-top:3px}
+.nav{display:flex;gap:4px;margin-left:auto;flex-wrap:wrap}
+.nav a{
+  padding:.5em .62em;font-size:.735rem;letter-spacing:.07em;text-transform:uppercase;white-space:nowrap;
+  color:var(--text);opacity:.82;border-radius:8px;transition:.2s;position:relative
+}
+.nav a:hover{opacity:1;color:var(--grenat)}
+.nav a.active{color:var(--grenat);opacity:1}
+.nav a.active::after{content:"";position:absolute;left:.62em;right:.62em;bottom:.15em;height:1px;background:var(--gold)}
+.header__actions{display:flex;align-items:center;gap:10px;flex:0 0 auto}
+.nav__auth{display:none;gap:10px;margin-top:14px;padding-top:14px;border-top:1px solid var(--line)}
+.burger{display:none;background:none;border:1px solid var(--line-gold);border-radius:10px;padding:9px 10px;cursor:pointer}
+.burger span{display:block;width:20px;height:1.5px;background:var(--grenat);margin:4px 0;transition:.25s}
+.icon-btn{
+  position:relative;border:1px solid var(--line-gold);background:none;border-radius:999px;
+  width:40px;height:40px;display:inline-flex;align-items:center;justify-content:center;cursor:pointer;transition:.2s
+}
+.icon-btn:hover{background:rgba(201,162,39,.1);border-color:var(--gold)}
+.badge-dot{
+  position:absolute;top:-4px;right:-4px;min-width:18px;height:18px;padding:0 4px;border-radius:999px;
+  background:var(--grenat);color:#fff;font-size:.62rem;display:inline-flex;align-items:center;justify-content:center
+}
+
+/* ---------- Hero ---------- */
+.hero{
+  position:relative;min-height:calc(100svh - var(--header-h));display:flex;align-items:center;
+  background:
+    radial-gradient(1200px 600px at 78% 18%, rgba(201,162,39,.20), transparent 60%),
+    radial-gradient(900px 500px at 10% 90%, rgba(201,162,39,.10), transparent 60%),
+    linear-gradient(160deg,var(--grenat-dark) 0%,var(--grenat) 52%,#4a0c1d 100%);
+  color:var(--ivoire);overflow:hidden;padding:64px 0
+}
+.hero::after{
+  content:"";position:absolute;inset:0;pointer-events:none;opacity:.35;
+  background-image:linear-gradient(rgba(201,162,39,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(201,162,39,.07) 1px,transparent 1px);
+  background-size:72px 72px;mask-image:radial-gradient(70% 60% at 50% 40%,#000,transparent)
+}
+.hero__grid{position:relative;z-index:2;display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+.hero h1{color:var(--ivoire)}
+.hero h1 em{font-style:italic;color:var(--gold-light)}
+.hero__sub{font-size:1.1rem;color:rgba(248,244,236,.82);max-width:54ch}
+.hero__cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:34px}
+.hero__stats{display:flex;gap:34px;margin-top:52px;flex-wrap:wrap}
+.hero__stat b{font-family:var(--serif);font-size:2rem;color:var(--gold-light);display:block;font-weight:500}
+.hero__stat span{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(248,244,236,.6)}
+
+/* Visuel modulaire animé du hero */
+.modular{
+  position:relative;aspect-ratio:4/5;border-radius:var(--radius-lg);
+  border:1px solid rgba(201,162,39,.32);background:rgba(23,19,21,.22);
+  backdrop-filter:blur(8px);overflow:hidden;display:flex;align-items:center;justify-content:center
+}
+.modular svg{width:78%;height:auto}
+.modular__label{
+  position:absolute;left:0;right:0;bottom:0;padding:18px 22px;
+  background:linear-gradient(transparent,rgba(23,19,21,.72));
+  display:flex;justify-content:space-between;align-items:flex-end;gap:12px
+}
+.modular__label b{font-family:var(--serif);font-size:1.2rem;color:var(--gold-light);font-weight:500}
+.modular__label span{font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(248,244,236,.65)}
+.modular__dots{display:flex;gap:7px;justify-content:center;margin-top:18px}
+.modular__dots i{width:26px;height:2px;background:rgba(248,244,236,.25);cursor:pointer;transition:.3s;border-radius:2px}
+.modular__dots i.on{background:var(--gold)}
+.piece{transition:opacity .6s ease, transform .6s ease;transform-origin:center}
+.piece.off{opacity:0;transform:translateY(8px) scale(.98)}
+
+/* ---------- Cartes ---------- */
+.grid{display:grid;gap:26px}
+.grid--2{grid-template-columns:repeat(2,1fr)}
+.grid--3{grid-template-columns:repeat(3,1fr)}
+.grid--4{grid-template-columns:repeat(4,1fr)}
+.card{
+  background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+  overflow:hidden;transition:.32s cubic-bezier(.2,.7,.3,1);position:relative
+}
+.card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);border-color:var(--line-gold)}
+.card__media{
+  aspect-ratio:3/4;position:relative;overflow:hidden;
+  background:linear-gradient(150deg,#efe7dc,#f8f4ec 55%,#e8dccb);
+  display:flex;align-items:center;justify-content:center
+}
+.card__media img{width:100%;height:100%;object-fit:cover}
+.card__media svg{width:56%;opacity:.5}
+.card__body{padding:20px 22px 24px}
+.card__title{font-family:var(--serif);font-size:1.3rem;margin:0 0 4px}
+.card__meta{font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+.card__price{font-family:var(--serif);font-size:1.22rem;color:var(--grenat);font-weight:600}
+.card__foot{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:14px}
+.tag{
+  display:inline-flex;align-items:center;gap:6px;padding:.3em .8em;border-radius:999px;
+  font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;border:1px solid var(--line-gold);color:var(--grenat)
+}
+.tag--gold{background:var(--gold);border-color:var(--gold);color:var(--grenat-dark)}
+.tag--demo{background:rgba(23,19,21,.06);border-color:var(--line);color:var(--muted)}
+.tag--pending{background:rgba(201,162,39,.16);border-color:var(--line-gold);color:#8a6d0f}
+.tag--ok{background:rgba(42,120,70,.1);border-color:rgba(42,120,70,.3);color:#2a7846}
+.fav{
+  position:absolute;top:12px;right:12px;width:38px;height:38px;border-radius:999px;border:none;
+  background:rgba(255,255,255,.9);display:inline-flex;align-items:center;justify-content:center;cursor:pointer;
+  transition:.2s;z-index:2
+}
+.fav:hover{background:#fff;transform:scale(1.06)}
+.fav.on svg{fill:var(--grenat);stroke:var(--grenat)}
+.card__badges{position:absolute;top:12px;left:12px;display:flex;flex-direction:column;gap:6px;z-index:2}
+
+/* ---------- Bandeau démo ---------- */
+.demo-note{
+  border:1px dashed var(--line-gold);background:rgba(201,162,39,.07);border-radius:var(--radius);
+  padding:14px 18px;font-size:.86rem;color:var(--muted);display:flex;gap:12px;align-items:center
+}
+
+/* ---------- Innovation ---------- */
+.flow{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;align-items:stretch;margin-top:44px}
+.flow__step{
+  border:1px solid var(--line-gold);border-radius:var(--radius);padding:26px 18px;text-align:center;
+  background:var(--surface);position:relative;opacity:0;transform:translateY(18px);
+  transition:opacity .7s ease,transform .7s ease
+}
+.flow__step.in{opacity:1;transform:none}
+.flow__step b{display:block;font-family:var(--serif);font-size:1.15rem;color:var(--grenat);margin-bottom:6px}
+.flow__step span{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+.flow__step::after{
+  content:"→";position:absolute;right:-16px;top:50%;transform:translateY(-50%);
+  color:var(--gold);font-size:1.1rem
+}
+.flow__step:last-child::after{display:none}
+
+/* ---------- Écosystème ---------- */
+.eco{border:1px solid var(--line);border-radius:var(--radius);padding:30px;background:var(--surface);transition:.3s}
+.eco:hover{border-color:var(--gold);transform:translateY(-3px);box-shadow:var(--shadow-md)}
+.eco__icon{
+  width:52px;height:52px;border-radius:14px;display:inline-flex;align-items:center;justify-content:center;
+  background:linear-gradient(140deg,var(--grenat),var(--grenat-dark));margin-bottom:16px
+}
+.eco__icon svg{width:24px;height:24px;stroke:var(--gold-light)}
+
+/* ---------- Bandeau sombre ---------- */
+.dark{
+  background:linear-gradient(150deg,var(--grenat-dark),var(--grenat));color:var(--ivoire);
+  position:relative;overflow:hidden
+}
+.dark h2,.dark h3{color:var(--ivoire)}
+.dark .muted{color:rgba(248,244,236,.68)}
+.dark .card{background:rgba(248,244,236,.06);border-color:rgba(201,162,39,.25);color:var(--ivoire)}
+.dark .card__title{color:var(--ivoire)}
+.dark::before{
+  content:"";position:absolute;width:520px;height:520px;border-radius:50%;
+  background:radial-gradient(circle,rgba(201,162,39,.18),transparent 65%);top:-160px;right:-120px
+}
+
+/* ---------- Filtres ---------- */
+.filters{
+  display:flex;gap:12px;flex-wrap:wrap;align-items:center;
+  padding:18px;border:1px solid var(--line);border-radius:var(--radius);background:var(--surface);margin-bottom:30px
+}
+.field{display:flex;flex-direction:column;gap:6px;min-width:150px;flex:1}
+.field label{font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.input,select.input,textarea.input{
+  width:100%;padding:.75em 1em;border:1px solid var(--line);border-radius:10px;background:var(--surface-2);
+  transition:.2s;font-size:.95rem
+}
+.input:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(201,162,39,.16);background:#fff}
+textarea.input{min-height:120px;resize:vertical}
+.chips{display:flex;gap:8px;flex-wrap:wrap}
+.chip{
+  padding:.45em 1em;border-radius:999px;border:1px solid var(--line);background:var(--surface);
+  font-size:.76rem;cursor:pointer;transition:.2s
+}
+.chip:hover{border-color:var(--gold)}
+.chip.on{background:var(--grenat);color:var(--ivoire);border-color:var(--grenat)}
+
+/* ---------- Fiche produit ---------- */
+.product{display:grid;grid-template-columns:1.05fr 1fr;gap:48px;align-items:start}
+.product__media{
+  border-radius:var(--radius-lg);overflow:hidden;border:1px solid var(--line-gold);
+  background:linear-gradient(150deg,#efe7dc,#f8f4ec 55%,#e8dccb);aspect-ratio:4/5;
+  display:flex;align-items:center;justify-content:center;position:sticky;top:calc(var(--header-h) + 20px)
+}
+.product__media svg{width:70%}
+.conf-list{display:grid;gap:10px;margin:18px 0}
+.conf{
+  display:flex;gap:14px;align-items:flex-start;padding:14px 16px;border:1px solid var(--line);
+  border-radius:12px;cursor:pointer;transition:.2s;background:var(--surface)
+}
+.conf:hover{border-color:var(--gold)}
+.conf.on{border-color:var(--grenat);background:rgba(90,15,36,.04);box-shadow:inset 3px 0 0 var(--gold)}
+.conf b{font-family:var(--serif);font-size:1.1rem}
+.mod{
+  display:flex;justify-content:space-between;align-items:center;gap:14px;padding:12px 16px;
+  border:1px solid var(--line);border-radius:12px;background:var(--surface);cursor:pointer;transition:.2s
+}
+.mod.on{border-color:var(--gold);background:rgba(201,162,39,.07)}
+.mod small{color:var(--muted)}
+.price-box{
+  border:1px solid var(--line-gold);border-radius:var(--radius);padding:20px;background:var(--surface-2);
+  display:flex;justify-content:space-between;align-items:center;gap:16px;margin:22px 0
+}
+.price-box b{font-family:var(--serif);font-size:1.8rem;color:var(--grenat)}
+.specs{display:grid;grid-template-columns:repeat(2,1fr);gap:0;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;margin-top:24px}
+.specs div{padding:14px 18px;border-bottom:1px solid var(--line)}
+.specs div:nth-child(odd){background:var(--surface-2);font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+
+/* ---------- Profils pro ---------- */
+.pro{display:flex;gap:18px;padding:22px;border:1px solid var(--line);border-radius:var(--radius);background:var(--surface);transition:.3s}
+.pro:hover{border-color:var(--line-gold);box-shadow:var(--shadow-md);transform:translateY(-3px)}
+.avatar{
+  width:74px;height:74px;border-radius:50%;flex:0 0 auto;object-fit:cover;
+  background:linear-gradient(140deg,var(--grenat),var(--grenat-dark));color:var(--gold-light);
+  display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:1.6rem;
+  border:2px solid var(--gold)
+}
+.avatar--sm{width:44px;height:44px;font-size:1.05rem;border-width:1px}
+.avatar--lg{width:110px;height:110px;font-size:2.4rem}
+
+/* ---------- Modale ---------- */
+.overlay{
+  position:fixed;inset:0;background:rgba(23,19,21,.62);backdrop-filter:blur(5px);z-index:200;
+  display:none;align-items:center;justify-content:center;padding:20px;overflow-y:auto
+}
+.overlay.open{display:flex}
+.modal{
+  background:var(--bg);border-radius:var(--radius-lg);width:100%;max-width:520px;position:relative;
+  border:1px solid var(--line-gold);box-shadow:0 40px 90px rgba(23,19,21,.4);
+  max-height:92vh;overflow-y:auto;animation:pop .32s cubic-bezier(.2,.8,.3,1)
+}
+.modal--wide{max-width:900px}
+@keyframes pop{from{opacity:0;transform:translateY(16px) scale(.98)}to{opacity:1;transform:none}}
+.modal__head{padding:30px 32px 0;text-align:center}
+.modal__body{padding:22px 32px 32px}
+.modal__close{
+  position:absolute;top:16px;right:16px;width:38px;height:38px;border-radius:999px;border:1px solid var(--line);
+  background:var(--surface);cursor:pointer;font-size:1.2rem;line-height:1;transition:.2s;z-index:2
+}
+.modal__close:hover{background:var(--grenat);color:var(--ivoire);border-color:var(--grenat)}
+.role-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:18px 0}
+.role{
+  border:1px solid var(--line);border-radius:14px;padding:18px 14px;text-align:center;cursor:pointer;transition:.24s;background:var(--surface)
+}
+.role:hover{border-color:var(--gold);transform:translateY(-2px)}
+.role.on{border-color:var(--grenat);background:rgba(90,15,36,.05);box-shadow:inset 0 -3px 0 var(--gold)}
+.role b{display:block;font-family:var(--serif);font-size:1.12rem;margin-bottom:2px}
+.role span{font-size:.72rem;color:var(--muted)}
+.tabs{display:flex;gap:6px;border-bottom:1px solid var(--line);margin-bottom:22px}
+.tabs button{
+  flex:1;padding:.85em;background:none;border:none;border-bottom:2px solid transparent;cursor:pointer;
+  font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);transition:.2s
+}
+.tabs button.on{color:var(--grenat);border-bottom-color:var(--gold)}
+.form-row{display:grid;gap:14px;margin-bottom:14px}
+.form-row--2{grid-template-columns:1fr 1fr}
+.alert{padding:12px 16px;border-radius:10px;font-size:.88rem;margin-bottom:14px}
+.alert--err{background:rgba(160,30,40,.08);border:1px solid rgba(160,30,40,.25);color:#8e1c28}
+.alert--ok{background:rgba(42,120,70,.08);border:1px solid rgba(42,120,70,.25);color:#2a7846}
+.alert--info{background:rgba(201,162,39,.1);border:1px solid var(--line-gold);color:#7d6410}
+
+/* ---------- Espace personnel ---------- */
+.dash{display:grid;grid-template-columns:262px 1fr;gap:32px;align-items:start;padding:40px 0 90px}
+.dash__side{
+  position:sticky;top:calc(var(--header-h) + 20px);border:1px solid var(--line);border-radius:var(--radius);
+  background:var(--surface);overflow:hidden
+}
+.dash__user{padding:24px;background:linear-gradient(150deg,var(--grenat-dark),var(--grenat));color:var(--ivoire);text-align:center}
+.dash__user b{display:block;font-family:var(--serif);font-size:1.2rem;margin-top:10px}
+.dash__user span{font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-light)}
+.dash__nav{padding:10px}
+.dash__nav a{
+  display:flex;align-items:center;gap:11px;padding:.72em .9em;border-radius:10px;font-size:.9rem;transition:.2s;color:var(--text)
+}
+.dash__nav a:hover{background:var(--surface-2)}
+.dash__nav a.active{background:rgba(90,15,36,.07);color:var(--grenat);box-shadow:inset 3px 0 0 var(--gold)}
+.dash__nav a svg{width:17px;height:17px;stroke:currentColor;opacity:.8}
+.stat{border:1px solid var(--line);border-radius:var(--radius);padding:22px;background:var(--surface)}
+.stat b{font-family:var(--serif);font-size:2.1rem;color:var(--grenat);display:block;line-height:1}
+.stat span{font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.panel{border:1px solid var(--line);border-radius:var(--radius);background:var(--surface);padding:26px;margin-bottom:24px}
+.panel__head{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:18px;flex-wrap:wrap}
+.panel__head h3{margin:0}
+.list-item{display:flex;gap:14px;align-items:center;padding:14px 0;border-bottom:1px solid var(--line)}
+.list-item:last-child{border-bottom:none}
+.list-item__main{flex:1;min-width:0}
+.list-item__main b{display:block;font-weight:500}
+.list-item__main small{color:var(--muted)}
+.empty{text-align:center;padding:44px 20px;color:var(--muted)}
+.empty svg{width:48px;height:48px;stroke:var(--gold);opacity:.6;margin:0 auto 14px}
+
+/* Messagerie */
+.chat{display:grid;grid-template-columns:280px 1fr;gap:0;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;min-height:480px;background:var(--surface)}
+.chat__list{border-right:1px solid var(--line);overflow-y:auto;max-height:560px}
+.chat__conv{padding:14px 16px;border-bottom:1px solid var(--line);cursor:pointer;transition:.2s}
+.chat__conv:hover{background:var(--surface-2)}
+.chat__conv.on{background:rgba(90,15,36,.06);box-shadow:inset 3px 0 0 var(--gold)}
+.chat__main{display:flex;flex-direction:column;max-height:560px}
+.chat__msgs{flex:1;overflow-y:auto;padding:20px;display:flex;flex-direction:column;gap:12px}
+.bubble{max-width:74%;padding:.7em 1.05em;border-radius:14px;background:var(--surface-2);border:1px solid var(--line);font-size:.93rem}
+.bubble.me{align-self:flex-end;background:var(--grenat);color:var(--ivoire);border-color:var(--grenat)}
+.bubble small{display:block;opacity:.6;font-size:.68rem;margin-top:4px}
+.chat__form{display:flex;gap:10px;padding:14px;border-top:1px solid var(--line)}
+
+/* ---------- Footer ---------- */
+.footer{background:var(--grenat-dark);color:rgba(248,244,236,.76);padding:70px 0 26px;margin-top:auto}
+.footer h4{color:var(--ivoire);font-family:var(--sans);font-size:.74rem;letter-spacing:.22em;text-transform:uppercase;margin-bottom:16px}
+.footer a{display:block;padding:.28em 0;font-size:.92rem;transition:.2s}
+.footer a:hover{color:var(--gold-light)}
+.footer__grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1.2fr;gap:36px}
+.footer__bottom{border-top:1px solid rgba(248,244,236,.14);margin-top:44px;padding-top:22px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:.8rem}
+
+/* ---------- Toast ---------- */
+.toast-wrap{position:fixed;bottom:24px;right:24px;z-index:400;display:flex;flex-direction:column;gap:10px}
+.toast{
+  background:var(--noir);color:var(--ivoire);padding:14px 20px;border-radius:12px;box-shadow:var(--shadow-md);
+  border-left:3px solid var(--gold);font-size:.9rem;animation:slide .3s ease;max-width:340px
+}
+.toast.err{border-left-color:#c0392b}
+@keyframes slide{from{opacity:0;transform:translateX(24px)}to{opacity:1;transform:none}}
+
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s ease}
+.reveal.in{opacity:1;transform:none}
+.skeleton{background:linear-gradient(90deg,#efe9e0,#f7f3ec,#efe9e0);background-size:200% 100%;animation:sk 1.3s infinite;border-radius:10px;height:14px}
+@keyframes sk{0%{background-position:200% 0}100%{background-position:-200% 0}}
+.spinner{width:18px;height:18px;border:2px solid rgba(248,244,236,.35);border-top-color:var(--gold);border-radius:50%;animation:spin .7s linear infinite;display:inline-block}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* ---------- Responsive ---------- */
+@media (max-width:1080px){
+  .nav{display:none;position:absolute;top:var(--header-h);left:0;right:0;background:var(--bg);
+       flex-direction:column;padding:16px 24px 24px;border-bottom:1px solid var(--line);box-shadow:var(--shadow-md);gap:2px}
+  .nav.open{display:flex}
+  .nav a{padding:.8em 0;font-size:.88rem}
+  .nav__auth{display:flex}
+  .nav__auth .btn{flex:1;padding:.8em 1em}
+  .burger{display:block;order:3}
+  .header__actions{margin-left:auto}
+  .hero__grid{grid-template-columns:1fr;gap:42px}
+  .modular{max-width:420px;margin:0 auto}
+  .product{grid-template-columns:1fr;gap:28px}
+  .product__media{position:static;max-width:520px;margin:0 auto}
+  .grid--4{grid-template-columns:repeat(3,1fr)}
+  .dash{grid-template-columns:1fr}
+  .dash__side{position:static}
+  .footer__grid{grid-template-columns:1fr 1fr}
+  .flow{grid-template-columns:repeat(2,1fr)}
+  .flow__step::after{display:none}
+}
+@media (max-width:760px){
+  .grid--2,.grid--3,.grid--4{grid-template-columns:repeat(2,1fr)}
+  .chat{grid-template-columns:1fr}
+  .chat__list{max-height:200px;border-right:none;border-bottom:1px solid var(--line)}
+  .specs{grid-template-columns:1fr}
+  .role-grid{grid-template-columns:1fr}
+  .hero__stats{gap:22px}
+  .modal__head,.modal__body{padding-left:22px;padding-right:22px}
+}
+@media (max-width:620px){
+  #btnLogin,#btnSignup,#btnLogout{display:none}   /* repris dans le menu déroulant */
+  .header__in{gap:10px}
+  .logo svg{height:32px}
+  .logo__name{font-size:1.15rem}
+  .logo__tag{display:none}
+  .header__actions .btn{padding:.6em 1em;font-size:.66rem}
+}
+@media (max-width:520px){
+  .btn{white-space:normal;max-width:100%;padding-left:1.25em;padding-right:1.25em;text-align:center}
+  .grid--2,.grid--3,.grid--4{grid-template-columns:1fr}
+  .wrap{padding:0 18px}
+  .form-row--2{grid-template-columns:1fr}
+  .toast-wrap{left:16px;right:16px;bottom:16px}
+  .toast{max-width:none}
+}
+@media (min-width:1700px){ :root{--maxw:1400px} }
+@media (prefers-reduced-motion:reduce){
+  *{animation-duration:.01ms !important;transition-duration:.01ms !important}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+<a href="#main" class="hidden">Aller au contenu</a>
+
+<!-- ======================= HEADER ======================= -->
+<header class="header" id="header">
+  <div class="wrap header__in">
+    <a href="#/" class="logo" aria-label="DZCouture — accueil">
+      <span id="logoSlot">
+        <!-- Logo temporaire DZCouture : aiguille + fil + lettres D/Z, évoquant
+             couture, modularité et transformation. Remplaçable depuis admin.html. -->
+        <svg viewBox="0 0 64 64" role="img" aria-label="Logo DZCouture">
+          <defs>
+            <linearGradient id="lgGold" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#E4C766"/><stop offset="100%" stop-color="#C9A227"/>
+            </linearGradient>
+          </defs>
+          <circle cx="32" cy="32" r="30" fill="none" stroke="url(#lgGold)" stroke-width="1.5"/>
+          <path d="M20 44V20h7.5c7 0 11.5 4.6 11.5 12S34.5 44 27.5 44H20z" fill="none" stroke="#5A0F24" stroke-width="3" stroke-linejoin="round"/>
+          <path d="M38 20h10L38 44h10" fill="none" stroke="url(#lgGold)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="32" cy="10" r="2.6" fill="url(#lgGold)"/>
+          <path d="M32 12.6c-9 6-9 12 0 18s9 12 0 18" fill="none" stroke="url(#lgGold)" stroke-width="1.2" stroke-dasharray="3 3" opacity=".9"/>
+        </svg>
+      </span>
+      <span class="logo__txt">
+        <span class="logo__name" id="brandName">DZCouture</span>
+        <span class="logo__tag" id="brandTag">Béjaïa · 2026</span>
+      </span>
+    </a>
+
+    <nav class="nav" id="nav">
+      <a href="#/">Accueil</a>
+      <a href="#/collections">Collections</a>
+      <a href="#/innovation">Innovation</a>
+      <a href="#/vetements">Vêtements</a>
+      <a href="#/couturieres">Couturières</a>
+      <a href="#/stylistes">Stylistes</a>
+      <a href="#/fournisseurs">Fournisseurs</a>
+      <a href="#/ateliers">Ateliers</a>
+      <a href="#/vip">VIP</a>
+      <a href="#/videos">Vidéos</a>
+      <a href="#/contact">Contact</a>
+    </nav>
+
+    <div class="header__actions" id="headerActions">
+      <button class="btn btn--ghost btn--sm" id="btnLogin">Connexion</button>
+      <button class="btn btn--primary btn--sm" id="btnSignup">Créer un compte</button>
+    </div>
+    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="main"><!-- les vues sont injectées ici --></main>
+
+<!-- ======================= FOOTER ======================= -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div>
+        <h4>DZCouture</h4>
+        <p class="muted" id="footSlogan" style="font-family:var(--serif);font-size:1.25rem;color:var(--gold-light)">Une pièce. Plusieurs styles. Votre élégance.</p>
+        <p style="font-size:.9rem">Plateforme de mode, couture et personnalisation reliant clientes, couturières, stylistes, fournisseurs et ateliers autour du vêtement modulable.</p>
+      </div>
+      <div>
+        <h4>Découvrir</h4>
+        <a href="#/collections">Collections</a>
+        <a href="#/vetements">Vêtements</a>
+        <a href="#/innovation">Le concept modulable</a>
+        <a href="#/vip">DZCouture VIP</a>
+        <a href="#/videos">Conseils &amp; tutoriels</a>
+      </div>
+      <div>
+        <h4>Professionnels</h4>
+        <a href="#/couturieres">Couturières</a>
+        <a href="#/stylistes">Stylistes</a>
+        <a href="#/fournisseurs">Fournisseurs</a>
+        <a href="#/ateliers">Ateliers</a>
+        <a href="#" id="footJoin">Rejoindre DZCouture</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <a id="footPhone" href="tel:+213674508196">+213 674 50 81 96</a>
+        <a id="footEmail" href="mailto:imeloulmarina@gmail.com">imeloulmarina@gmail.com</a>
+        <a id="footAddr" href="#/contact">Béjaïa, Algérie</a>
+        <div class="chips" id="footSocial" style="margin-top:14px"></div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© <span id="year">2026</span> DZCouture — Béjaïa, Algérie. Tous droits réservés.</span>
+      <span class="muted">Site de démonstration — les professionnels et produits affichés sont fictifs.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ======================= MODALE AUTH ======================= -->
+<div class="overlay" id="authModal">
+  <div class="modal" role="dialog" aria-modal="true" aria-label="Compte DZCouture">
+    <button class="modal__close" data-close>&times;</button>
+    <div class="modal__head">
+      <span class="eyebrow">Espace DZCouture</span>
+      <h2 style="margin-bottom:6px" id="authTitle">Bienvenue</h2>
+      <p class="muted" style="font-size:.92rem" id="authSub">Accédez à votre espace personnel.</p>
+    </div>
+    <div class="modal__body">
+      <div class="tabs">
+        <button data-tab="login" class="on">Connexion</button>
+        <button data-tab="signup">Créer un compte</button>
+      </div>
+      <div id="authAlert"></div>
+
+      <form id="loginForm">
+        <div class="form-row"><div class="field"><label>Email</label><input class="input" type="email" name="email" required autocomplete="email"></div></div>
+        <div class="form-row"><div class="field"><label>Mot de passe</label><input class="input" type="password" name="password" required autocomplete="current-password"></div></div>
+        <button class="btn btn--primary btn--block" type="submit">Se connecter</button>
+        <p class="center" style="margin:16px 0 0"><a href="#" id="forgotLink" class="muted" style="font-size:.86rem;text-decoration:underline">Mot de passe oublié ?</a></p>
+      </form>
+
+      <form id="signupForm" class="hidden">
+        <p class="muted" style="font-size:.86rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:6px">Que souhaitez-vous faire ?</p>
+        <div class="role-grid" id="roleGrid">
+          <div class="role on" data-role="client"><b>Je suis cliente</b><span>Découvrir, sauvegarder, composer ma garde-robe</span></div>
+          <div class="role" data-role="seamstress"><b>Je suis couturière</b><span>Présenter mes créations et mes services</span></div>
+          <div class="role" data-role="stylist"><b>Je suis styliste</b><span>Conseiller et composer des looks</span></div>
+          <div class="role" data-role="supplier"><b>Je suis fournisseur</b><span>Proposer tissus, matières et accessoires</span></div>
+        </div>
+        <div class="form-row form-row--2">
+          <div class="field"><label>Nom complet</label><input class="input" name="full_name" required></div>
+          <div class="field"><label>Téléphone</label><input class="input" name="phone" placeholder="+213 …"></div>
+        </div>
+        <div class="form-row" id="companyRow" style="display:none">
+          <div class="field"><label>Nom de l'entreprise</label><input class="input" name="company_name"></div>
+        </div>
+        <div class="form-row form-row--2">
+          <div class="field"><label>Email</label><input class="input" type="email" name="email" required autocomplete="email"></div>
+          <div class="field"><label>Ville</label><input class="input" name="city" value="Béjaïa"></div>
+        </div>
+        <div class="form-row"><div class="field"><label>Mot de passe (8 caractères minimum)</label><input class="input" type="password" name="password" minlength="8" required autocomplete="new-password"></div></div>
+        <p class="muted" style="font-size:.78rem" id="roleNote">Les comptes professionnels sont vérifiés par l'équipe DZCouture avant publication.</p>
+        <button class="btn btn--primary btn--block" type="submit">Créer mon compte</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- ======================= MODALE GÉNÉRIQUE ======================= -->
+<div class="overlay" id="genericModal">
+  <div class="modal modal--wide" role="dialog" aria-modal="true">
+    <button class="modal__close" data-close>&times;</button>
+    <div class="modal__body" id="genericBody"></div>
+  </div>
+</div>
+
+<div class="toast-wrap" id="toasts"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+<script>
+/* ==========================================================================
+   DZCouture — Application publique
+   --------------------------------------------------------------------------
+   1. Configuration      2. Données de démonstration    3. Couche données
+   4. Utilitaires        5. Authentification            6. Vues publiques
+   7. Espaces personnels 8. Routeur
+   --------------------------------------------------------------------------
+   SÉCURITÉ : seule la clé « anon » publique de Supabase figure ici — c'est son
+   usage prévu. La clé service_role ne doit JAMAIS être placée dans ce fichier.
+   Toute la protection réelle repose sur les politiques RLS définies dans
+   supabase-schema.sql, jamais sur ce code côté navigateur.
+   ========================================================================== */
+
+/* ==========================================================================
+   1. CONFIGURATION — À RENSEIGNER APRÈS CRÉATION DU PROJET SUPABASE
+   ========================================================================== */
+const CONFIG = {
+  SUPABASE_URL:      'https://azgeqwtvphurbnamtxhe.supabase.co',
+  // Clé « Publishable » (Settings > API Keys) : elle commence par sb_publishable_
+  // Elle est conçue pour être publique. Ne jamais mettre ici la clé sb_secret_.
+  SUPABASE_ANON_KEY: 'sb_publishable_XTtltXb2iWhO9kHg6ZvJwg_Pzm0VTI2'
+};
+
+let sb = null;
+let ONLINE = false;
+try {
+  if (CONFIG.SUPABASE_URL.startsWith('http') && CONFIG.SUPABASE_ANON_KEY.length > 30 && window.supabase) {
+    sb = window.supabase.createClient(CONFIG.SUPABASE_URL, CONFIG.SUPABASE_ANON_KEY, {
+      auth: { persistSession: true, autoRefreshToken: true, detectSessionInUrl: true }
+    });
+    ONLINE = true;
+  }
+} catch (e) { console.warn('Supabase non configuré :', e.message); }
+
+/* ==========================================================================
+   2. DONNÉES DE DÉMONSTRATION
+   Utilisées tant que Supabase n'est pas configuré, et comme repli si une
+   requête échoue. Tous ces contenus sont FICTIFS et marqués comme tels.
+   ========================================================================== */
+const DEMO = {
+  settings: {
+    identity: { site_name:'DZCouture', slogan:'Une pièce. Plusieurs styles. Votre élégance.',
+                baseline:'Mode, couture et vêtements modulables — Béjaïa, Algérie', year:'2026', logo_url:'', logo_svg:'' },
+    colors:   { primary:'#5A0F24', primary_dark:'#3B0917', gold:'#C9A227', gold_light:'#E4C766',
+                background:'#F8F4EC', text:'#171315', button:'#5A0F24', button_text:'#F8F4EC' },
+    contact:  { phone:'+213 674 50 81 96', email:'imeloulmarina@gmail.com', address:'Béjaïa, Algérie',
+                hours:'Dimanche — Jeudi, 9h — 18h' },
+    social:   { facebook:'', instagram:'', tiktok:'', whatsapp:'', youtube:'' },
+    seo:      { title:'DZCouture — Mode, couture et vêtements modulables à Béjaïa', description:'', keywords:'' }
+  },
+  sections: {
+    hero: { title:'Une pièce. Plusieurs styles.',
+            subtitle:"DZCouture réunit clientes, couturières, stylistes, fournisseurs et ateliers autour du vêtement modulable : transformez une seule pièce en plusieurs looks.",
+            content:{ cta1:'Découvrir les collections', cta2:'Créer mon compte' } },
+    innovation: { title:'Une pièce. Plusieurs possibilités.',
+            subtitle:"Ajoutez ou retirez des modules et la même pièce change de registre : quotidien, élégant, fête, soirée.",
+            content:{ steps:['Robe de base','+ Module','Look élégant','+ Module','Look de soirée'] } },
+    community: { title:"Un écosystème, quatre façons d'y entrer",
+            subtitle:"Que vous cherchiez, créiez, conseilliez ou fournissiez, DZCouture vous donne un espace." },
+    vip: { title:'DZCouture VIP', subtitle:'Un accompagnement personnalisé par un styliste dédié.' }
+  },
+  categories: [
+    {id:'c1',name:'Robes',slug:'robes'},{id:'c2',name:'Pantalons',slug:'pantalons'},
+    {id:'c3',name:'Vestes',slug:'vestes'},{id:'c4',name:'Jupes',slug:'jupes'},
+    {id:'c5',name:'Chemises',slug:'chemises'},{id:'c6',name:'Vêtements modulables',slug:'modulables'},
+    {id:'c7',name:'Haute couture',slug:'haute-couture'},{id:'c8',name:'Sur mesure',slug:'sur-mesure'},
+    {id:'c9',name:'Accessoires',slug:'accessoires'}
+  ],
+  collections: [
+    {id:'col1',name:'Collection Capsule',slug:'collection-capsule',season:'Toutes saisons',is_demo:true,
+     description:"Une garde-robe minimale et modulable : peu de pièces, beaucoup de combinaisons."},
+    {id:'col2',name:'Signature 2026',slug:'signature-2026',season:'2026',is_demo:true,
+     description:"Les pièces emblématiques qui incarnent la ligne DZCouture."}
+  ],
+  products: [
+    { id:'p1', name:'Robe Évolution', slug:'robe-evolution', price:18500, currency:'DZD',
+      category_id:'c6', collection_id:'col2', material:'Crêpe de soie doublé', is_modular:true, is_featured:true, is_demo:true,
+      colors:['Grenat','Noir','Ivoire'], sizes:['36','38','40','42','44'], availability:'available',
+      features:['Modules amovibles','Fermetures invisibles','Doublure intégrale','Entretien facile'],
+      description:"La pièce fondatrice de DZCouture : une robe de base qui se transforme en quatre looks grâce à ses modules amovibles.",
+      story:"Conçue comme une démonstration du principe modulable : une seule pièce, quatre occasions.",
+      modules:[
+        {id:'m1',name:'Manches longues',price_delta:3200,description:'Manches amovibles en crêpe assorti, fixation invisible.'},
+        {id:'m2',name:'Cape',price_delta:4800,description:'Cape fluide longue, portée sur les épaules ou nouée.'},
+        {id:'m3',name:'Ceinture brodée',price_delta:2500,description:'Ceinture structurée, broderie fil gold.'},
+        {id:'m4',name:'Jupe supplémentaire',price_delta:6500,description:'Sur-jupe volumineuse pour les grandes occasions.'},
+        {id:'m5',name:'Col montant',price_delta:1800,description:'Col amovible pour un rendu plus couvrant.'}
+      ],
+      configurations:[
+        {id:'k1',name:'Look 1 — Sortie',occasion:'quotidien',description:'La robe seule, ligne épurée pour la journée.',module_ids:[]},
+        {id:'k2',name:'Look 2 — Élégant',occasion:'élégant',description:'Avec manches longues et ceinture brodée.',module_ids:['m1','m3']},
+        {id:'k3',name:'Look 3 — Fête',occasion:'fête',description:'Manches, ceinture et col montant.',module_ids:['m1','m3','m5']},
+        {id:'k4',name:'Look 4 — Soirée',occasion:'soirée',description:'Cape et sur-jupe : silhouette de soirée.',module_ids:['m2','m4','m3']}
+      ]},
+    { id:'p2', name:'Robe Signature', slug:'robe-signature', price:22000, currency:'DZD',
+      category_id:'c7', collection_id:'col2', material:'Crêpe structuré', is_couture:true, is_featured:true, is_demo:true,
+      colors:['Grenat','Noir'], sizes:['36','38','40','42'], availability:'on_demand', features:['Pièce couture','Finitions main'],
+      description:"Pièce signature en crêpe structuré, coupe droite et finitions gold.", modules:[], configurations:[] },
+    { id:'p3', name:'Robe Élégance', slug:'robe-elegance', price:16500, currency:'DZD',
+      category_id:'c1', collection_id:'col2', material:'Mousseline doublée', is_modular:true, is_demo:true,
+      colors:['Ivoire','Grenat'], sizes:['36','38','40','42'], availability:'available', features:['Drapé asymétrique'],
+      description:"Robe longue fluide, drapé asymétrique, module ceinture disponible.",
+      modules:[{id:'m6',name:'Ceinture drapée',price_delta:2100,description:'Ceinture assortie nouée à la taille.'}],
+      configurations:[
+        {id:'k5',name:'Look 1 — Jour',occasion:'quotidien',description:'Robe seule, fluide.',module_ids:[]},
+        {id:'k6',name:'Look 2 — Cérémonie',occasion:'fête',description:'Avec ceinture drapée.',module_ids:['m6']}
+      ]},
+    { id:'p4', name:'Ensemble Transformation', slug:'ensemble-transformation', price:19500, currency:'DZD',
+      category_id:'c6', collection_id:'col1', material:'Gabardine légère', is_modular:true, is_featured:true, is_demo:true,
+      colors:['Noir','Ivoire','Grenat'], sizes:['S','M','L','XL'], availability:'available',
+      features:['Haut convertible','Deux pièces'],
+      description:"Ensemble deux pièces convertible : le haut se porte croisé, noué ou ouvert.",
+      modules:[{id:'m7',name:'Ceinture obi',price_delta:2200,description:'Large ceinture nouée à la taille.'},
+               {id:'m8',name:'Sur-veste',price_delta:5400,description:'Veste longue sans manches à porter par-dessus.'}],
+      configurations:[
+        {id:'k7',name:'Look 1 — Jour',occasion:'quotidien',description:'Ensemble porté simple.',module_ids:[]},
+        {id:'k8',name:'Look 2 — Bureau',occasion:'élégant',description:'Avec ceinture obi.',module_ids:['m7']},
+        {id:'k9',name:'Look 3 — Soirée',occasion:'soirée',description:'Avec sur-veste longue.',module_ids:['m8','m7']}
+      ]},
+    { id:'p5', name:'Collection Capsule', slug:'produit-collection-capsule', price:48000, currency:'DZD',
+      category_id:'c6', collection_id:'col1', material:'Mix matières', is_modular:true, is_demo:true,
+      colors:['Grenat','Ivoire','Noir'], sizes:['S','M','L'], availability:'on_demand',
+      features:['5 pièces combinables','Plus de 15 looks possibles'],
+      description:"Sélection capsule de 5 pièces pensées pour se combiner entre elles.", modules:[], configurations:[] }
+  ],
+  workshops: [
+    {id:'w1',name:'Atelier Démonstration A',slug:'atelier-demo-a',city:'Béjaïa',is_demo:true,
+     specialties:['Sur mesure','Retouches'],services:['Couture','Essayage'],
+     description:"Exemple d'atelier partenaire — donnée de démonstration."},
+    {id:'w2',name:'Atelier Démonstration B',slug:'atelier-demo-b',city:'Béjaïa',is_demo:true,
+     specialties:['Haute couture'],services:['Création','Broderie'],
+     description:"Exemple d'atelier partenaire — donnée de démonstration."}
+  ],
+  videos: [
+    {id:'v1',title:'Comment transformer une robe',category:'Tutoriels',is_demo:true,url:'',
+     description:'Démonstration du principe modulable DZCouture.'},
+    {id:'v2',title:'Utiliser les modules',category:'Tutoriels',is_demo:true,url:'',
+     description:'Fixer manches, cape et ceinture en quelques gestes.'},
+    {id:'v3',title:'Créer un look',category:'Conseils',is_demo:true,url:'',
+     description:'Composer une tenue à partir de votre garde-robe.'},
+    {id:'v4',title:'Organiser sa garde-robe',category:'Conseils',is_demo:true,url:'',
+     description:'Méthode DZCouture pour une garde-robe lisible.'}
+  ],
+  seamstresses: [], stylists: [], suppliers: []
+  /* Aucun professionnel fictif n'est inventé : les annuaires se remplissent
+     avec les vrais comptes validés depuis l'administration. */
+};
+
+/* ==========================================================================
+   3. ÉTAT GLOBAL
+   ========================================================================== */
+const S = {
+  user:null, profile:null,
+  settings:JSON.parse(JSON.stringify(DEMO.settings)),
+  sections:JSON.parse(JSON.stringify(DEMO.sections)),
+  categories:[], collections:[], products:[], favorites:[], notifications:[],
+  route:'/', params:{}
+};
+
+/* ==========================================================================
+   4. UTILITAIRES
+   ========================================================================== */
+const $  = (s,r=document)=>r.querySelector(s);
+const $$ = (s,r=document)=>Array.from(r.querySelectorAll(s));
+const esc = v => String(v==null?'':v).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const money = (n,c='DZD') => new Intl.NumberFormat('fr-DZ',{maximumFractionDigits:0}).format(Number(n)||0)+' '+c;
+const dateFr = d => d ? new Date(d).toLocaleDateString('fr-FR',{day:'2-digit',month:'short',year:'numeric'}) : '';
+const initials = n => (n||'?').trim().split(/\s+/).slice(0,2).map(w=>w[0]).join('').toUpperCase();
+const slugify = s => (s||'').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
+
+function toast(msg, type){
+  const el = document.createElement('div');
+  el.className = 'toast' + (type==='err'?' err':'');
+  el.textContent = msg;
+  $('#toasts').appendChild(el);
+  setTimeout(()=>{ el.style.opacity='0'; el.style.transform='translateX(24px)'; setTimeout(()=>el.remove(),300); }, 4200);
+}
+
+function openModal(id){ $('#'+id).classList.add('open'); document.body.style.overflow='hidden'; }
+function closeModal(el){ el.classList.remove('open'); document.body.style.overflow=''; }
+$$('[data-close]').forEach(b=>b.onclick=()=>closeModal(b.closest('.overlay')));
+$$('.overlay').forEach(o=>o.addEventListener('click',e=>{ if(e.target===o) closeModal(o); }));
+document.addEventListener('keydown',e=>{ if(e.key==='Escape') $$('.overlay.open').forEach(closeModal); });
+
+/* Stockage local utilisé uniquement en mode démonstration (Supabase absent) */
+const LS = {
+  key:'dzcouture_demo_v1',
+  read(){ try{ return JSON.parse(localStorage.getItem(this.key)||'{}'); }catch(e){ return {}; } },
+  write(d){ try{ localStorage.setItem(this.key, JSON.stringify(d)); }catch(e){} },
+  get(k,fallback){ const d=this.read(); return d[k]===undefined?fallback:d[k]; },
+  set(k,v){ const d=this.read(); d[k]=v; this.write(d); }
+};
+
+/* Silhouette SVG générique : sert d'illustration tant qu'aucune photo n'est
+   téléversée dans Supabase Storage. Les modules actifs s'affichent en gold. */
+function silhouette(active = {}, opts = {}){
+  const on = k => active[k] ? '' : ' off';
+  const s = opts.stroke || '#5A0F24', g = opts.gold || '#C9A227';
+  return `<svg viewBox="0 0 220 320" aria-hidden="true">
+    <g fill="none" stroke="${s}" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round">
+      <path d="M110 22a17 17 0 1 0 .1 0Z"/>
+      <path d="M92 46c-14 6-26 12-30 22l10 26 12-6"/>
+      <path d="M128 46c14 6 26 12 30 22l-10 26-12-6"/>
+      <path d="M92 46h36c8 22 10 46 8 70l-6 44H90l-6-44c-2-24 0-48 8-70Z"/>
+      <path d="M90 160h40l16 118H74Z" opacity=".9"/>
+    </g>
+    <g class="piece${on('sleeves')}" fill="none" stroke="${g}" stroke-width="2.6" stroke-linecap="round">
+      <path d="M72 68 58 150l16 8 12-76"/><path d="M148 68l14 82-16 8-12-76"/>
+    </g>
+    <g class="piece${on('cape')}" fill="none" stroke="${g}" stroke-width="2.6" stroke-linejoin="round">
+      <path d="M92 46 40 210h24l24-140"/><path d="M128 46l52 164h-24l-24-140"/>
+    </g>
+    <g class="piece${on('belt')}" fill="none" stroke="${g}" stroke-width="4" stroke-linecap="round">
+      <path d="M86 156h48"/><circle cx="110" cy="156" r="5" stroke-width="2"/>
+    </g>
+    <g class="piece${on('skirt')}" fill="none" stroke="${g}" stroke-width="2.6" stroke-linejoin="round">
+      <path d="M88 168 52 300h116l-36-132"/><path d="M62 262h96"/>
+    </g>
+    <g class="piece${on('collar')}" fill="none" stroke="${g}" stroke-width="2.6" stroke-linecap="round">
+      <path d="M96 44c6 10 22 10 28 0"/><path d="M96 38h28"/>
+    </g>
+  </svg>`;
+}
+
+/* Associe un nom de module à une pièce de la silhouette */
+function moduleKey(name){
+  const n = (name||'').toLowerCase();
+  if(n.includes('manche')) return 'sleeves';
+  if(n.includes('cape')||n.includes('veste')) return 'cape';
+  if(n.includes('ceinture')) return 'belt';
+  if(n.includes('jupe')) return 'skirt';
+  if(n.includes('col')) return 'collar';
+  return 'belt';
+}
+
+/* ==========================================================================
+   5. COUCHE DONNÉES
+   Chaque méthode interroge Supabase si disponible, sinon retombe sur les
+   données de démonstration (et sur localStorage pour l'espace personnel).
+   ========================================================================== */
+/* Enveloppe toute requête Supabase : si le réseau tombe ou si la table n'existe
+   pas encore, on retombe sur les données de démonstration au lieu de casser la page. */
+async function sbq(promise){
+  try{
+    const r = await promise;
+    if(r && r.error){ console.warn('Supabase :', r.error.message); return { data:null, error:r.error }; }
+    return r;
+  }catch(e){
+    console.warn('Supabase injoignable :', e.message);
+    return { data:null, error:e };
+  }
+}
+
+const DB = {
+
+  async loadSettings(){
+    if(!ONLINE) return;
+    const { data, error } = await sbq(sb.from('site_settings').select('key,value'));
+    if(error || !data) return;
+    data.forEach(r => { S.settings[r.key] = Object.assign({}, S.settings[r.key], r.value); });
+    const sec = await sbq(sb.from('site_sections').select('*').order('position'));
+    if(sec.data) sec.data.forEach(r => {
+      S.sections[r.key] = { title:r.title, subtitle:r.subtitle, content:r.content||{}, image_url:r.image_url, is_visible:r.is_visible };
+    });
+  },
+
+  async categories(){
+    if(S.categories.length) return S.categories;
+    if(ONLINE){
+      const { data } = await sbq(sb.from('categories').select('*').eq('is_active',true).order('position'));
+      if(data && data.length){ S.categories = data; return data; }
+    }
+    S.categories = DEMO.categories; return S.categories;
+  },
+
+  async collections(){
+    if(S.collections.length) return S.collections;
+    if(ONLINE){
+      const { data } = await sbq(sb.from('collections').select('*').eq('is_active',true).order('position'));
+      if(data && data.length){ S.collections = data; return data; }
+    }
+    S.collections = DEMO.collections; return S.collections;
+  },
+
+  async products(){
+    if(S.products.length) return S.products;
+    if(ONLINE){
+      const { data } = await sbq(sb.from('products')
+        .select('*, product_modules(*), product_configurations(*), product_images(*)')
+        .eq('status','approved').order('position'));
+      if(data && data.length){
+        S.products = data.map(p => Object.assign({}, p, {
+          modules: (p.product_modules||[]).sort((a,b)=>a.position-b.position),
+          configurations: (p.product_configurations||[]).sort((a,b)=>a.position-b.position),
+          images: (p.product_images||[]).sort((a,b)=>a.position-b.position)
+        }));
+        return S.products;
+      }
+    }
+    S.products = DEMO.products; return S.products;
+  },
+
+  async product(slug){
+    const all = await DB.products();
+    return all.find(p => p.slug === slug) || null;
+  },
+
+  async pros(type){ // 'seamstresses' | 'stylists' | 'suppliers'
+    if(ONLINE){
+      const { data } = await sbq(sb.from(type).select('*, profiles(full_name, display_name, avatar_url, city)').eq('status','approved'));
+      if(data) return data.map(r => Object.assign({}, r, { profile: r.profiles || {} }));
+    }
+    return DEMO[type] || [];
+  },
+
+  async workshops(){
+    if(ONLINE){
+      const { data } = await sbq(sb.from('workshops').select('*').eq('status','approved').order('position'));
+      if(data && data.length) return data;
+    }
+    return DEMO.workshops;
+  },
+
+  async videos(){
+    if(ONLINE){
+      const { data } = await sbq(sb.from('videos').select('*').eq('is_published',true).order('position'));
+      if(data && data.length) return data;
+    }
+    return DEMO.videos;
+  },
+
+  /* ---------------- Favoris ---------------- */
+  async favorites(){
+    if(!S.user) return [];
+    if(ONLINE){
+      const { data } = await sbq(sb.from('favorites').select('product_id').eq('user_id',S.user.id));
+      S.favorites = (data||[]).map(r=>r.product_id); return S.favorites;
+    }
+    S.favorites = LS.get('favorites',[]); return S.favorites;
+  },
+  async toggleFavorite(productId){
+    if(!S.user){ Auth.open('login','Connectez-vous pour enregistrer vos coups de cœur.'); return null; }
+    const has = S.favorites.includes(productId);
+    if(ONLINE){
+      if(has) await sb.from('favorites').delete().eq('user_id',S.user.id).eq('product_id',productId);
+      else    await sb.from('favorites').insert({ user_id:S.user.id, product_id:productId });
+    }
+    S.favorites = has ? S.favorites.filter(x=>x!==productId) : S.favorites.concat(productId);
+    if(!ONLINE) LS.set('favorites', S.favorites);
+    return !has;
+  },
+
+  /* ---------------- Garde-robe ---------------- */
+  async wardrobeItems(){
+    if(!S.user) return [];
+    if(ONLINE){
+      const { data } = await sb.from('wardrobe_items').select('*').eq('user_id',S.user.id).order('created_at',{ascending:false});
+      return data || [];
+    }
+    return LS.get('wardrobe',[]);
+  },
+  async addWardrobeItem(item){
+    if(ONLINE){
+      let wid = LS.get('wardrobe_id',null);
+      if(!wid){
+        const { data } = await sb.from('wardrobes').select('id').eq('user_id',S.user.id).limit(1);
+        if(data && data[0]) wid = data[0].id;
+        else {
+          const ins = await sb.from('wardrobes').insert({ user_id:S.user.id, name:'Ma garde-robe', is_default:true }).select('id').single();
+          wid = ins.data && ins.data.id;
+        }
+        LS.set('wardrobe_id', wid);
+      }
+      const { error } = await sb.from('wardrobe_items').insert(Object.assign({ user_id:S.user.id, wardrobe_id:wid }, item));
+      if(error) throw error;
+    } else {
+      const list = LS.get('wardrobe',[]);
+      list.unshift(Object.assign({ id:'w'+Date.now(), created_at:new Date().toISOString() }, item));
+      LS.set('wardrobe', list);
+    }
+  },
+  async removeWardrobeItem(id){
+    if(ONLINE) await sb.from('wardrobe_items').delete().eq('id',id);
+    else LS.set('wardrobe', LS.get('wardrobe',[]).filter(i=>i.id!==id));
+  },
+
+  /* ---------------- Garde-robe capsule ---------------- */
+  async capsule(){
+    if(!S.user) return null;
+    if(ONLINE){
+      const { data } = await sb.from('capsule_wardrobes').select('*, capsule_items(*)').eq('user_id',S.user.id).limit(1);
+      if(data && data[0]) return Object.assign({}, data[0], { items:data[0].capsule_items||[] });
+      const ins = await sb.from('capsule_wardrobes').insert({ user_id:S.user.id, name:'Ma garde-robe capsule',
+        target:{hauts:3,pantalons:2,vestes:1,robes:2,accessoires:3} }).select('*').single();
+      return ins.data ? Object.assign({}, ins.data, { items:[] }) : null;
+    }
+    let c = LS.get('capsule',null);
+    if(!c){ c = { id:'cap1', name:'Ma garde-robe capsule', season:'Toutes saisons',
+                  target:{hauts:3,pantalons:2,vestes:1,robes:2,accessoires:3}, items:[] }; LS.set('capsule',c); }
+    return c;
+  },
+  async addCapsuleItem(capsuleId, item){
+    if(ONLINE){ await sb.from('capsule_items').insert(Object.assign({ capsule_id:capsuleId, user_id:S.user.id }, item)); }
+    else { const c = LS.get('capsule',null); if(c){ c.items.push(Object.assign({id:'ci'+Date.now()},item)); LS.set('capsule',c); } }
+  },
+  async removeCapsuleItem(id){
+    if(ONLINE) await sb.from('capsule_items').delete().eq('id',id);
+    else { const c = LS.get('capsule',null); if(c){ c.items = c.items.filter(i=>i.id!==id); LS.set('capsule',c); } }
+  },
+
+  /* ---------------- Demandes ---------------- */
+  async requests(){
+    if(!S.user) return [];
+    if(ONLINE){
+      const { data } = await sb.from('service_requests')
+        .select('*, client:profiles!service_requests_client_id_fkey(full_name), provider:profiles!service_requests_provider_id_fkey(full_name)')
+        .or(`client_id.eq.${S.user.id},provider_id.eq.${S.user.id}`).order('created_at',{ascending:false});
+      return data || [];
+    }
+    return LS.get('requests',[]);
+  },
+  async createRequest(req){
+    if(ONLINE){
+      const { error } = await sb.from('service_requests').insert(Object.assign({ client_id:S.user.id }, req));
+      if(error) throw error;
+      if(req.provider_id){
+        await sb.from('notifications').insert({ user_id:req.provider_id, type:'request',
+          title:'Nouvelle demande', body:req.title || 'Une cliente vous a contactée.', link:'#/compte/demandes' });
+      }
+    } else {
+      const list = LS.get('requests',[]);
+      list.unshift(Object.assign({ id:'r'+Date.now(), status:'pending', created_at:new Date().toISOString(), client_id:'demo' }, req));
+      LS.set('requests', list);
+    }
+  },
+  async updateRequest(id, patch){
+    if(ONLINE) await sb.from('service_requests').update(patch).eq('id',id);
+    else { const l = LS.get('requests',[]); const i = l.findIndex(r=>r.id===id); if(i>-1){ Object.assign(l[i],patch); LS.set('requests',l); } }
+  },
+
+  /* ---------------- Messagerie ---------------- */
+  async conversations(){
+    if(!S.user) return [];
+    if(ONLINE){
+      const { data } = await sb.from('conversations')
+        .select('*, client:profiles!conversations_client_id_fkey(full_name,avatar_url), provider:profiles!conversations_provider_id_fkey(full_name,avatar_url)')
+        .or(`client_id.eq.${S.user.id},provider_id.eq.${S.user.id}`).order('last_message_at',{ascending:false});
+      return data || [];
+    }
+    return LS.get('conversations',[]);
+  },
+  async messages(convId){
+    if(ONLINE){
+      const { data } = await sb.from('messages').select('*').eq('conversation_id',convId).order('created_at');
+      return data || [];
+    }
+    return LS.get('messages_'+convId,[]);
+  },
+  async sendMessage(convId, body){
+    if(ONLINE){
+      const { error } = await sb.from('messages').insert({ conversation_id:convId, sender_id:S.user.id, body });
+      if(error) throw error;
+    } else {
+      const l = LS.get('messages_'+convId,[]);
+      l.push({ id:'m'+Date.now(), sender_id:'demo', body, created_at:new Date().toISOString() });
+      LS.set('messages_'+convId, l);
+    }
+  },
+  async startConversation(providerId, subject){
+    if(ONLINE){
+      const { data:ex } = await sb.from('conversations').select('id')
+        .eq('client_id',S.user.id).eq('provider_id',providerId).eq('subject',subject).limit(1);
+      if(ex && ex[0]) return ex[0].id;
+      const { data, error } = await sb.from('conversations')
+        .insert({ client_id:S.user.id, provider_id:providerId, subject }).select('id').single();
+      if(error) throw error;
+      return data.id;
+    }
+    const l = LS.get('conversations',[]);
+    const id = 'c'+Date.now();
+    l.unshift({ id, subject, provider:{full_name:'DZCouture'}, last_message_at:new Date().toISOString() });
+    LS.set('conversations', l);
+    return id;
+  },
+
+  /* ---------------- Notifications ---------------- */
+  async notifications(){
+    if(!S.user) return [];
+    if(ONLINE){
+      const { data } = await sbq(sb.from('notifications').select('*').eq('user_id',S.user.id)
+        .order('created_at',{ascending:false}).limit(40));
+      S.notifications = data || [];
+    } else {
+      S.notifications = LS.get('notifications',[]);
+    }
+    return S.notifications;
+  },
+  async readNotification(id){
+    if(ONLINE) await sb.from('notifications').update({is_read:true}).eq('id',id);
+    else { const l = LS.get('notifications',[]); const n = l.find(x=>x.id===id); if(n){ n.is_read=true; LS.set('notifications',l); } }
+  },
+
+  /* ---------------- Contact ---------------- */
+  async contact(payload){
+    if(ONLINE){
+      const { error } = await sb.from('contact_messages').insert(Object.assign({ user_id:S.user?S.user.id:null }, payload));
+      if(error) throw error;
+    } else {
+      const l = LS.get('contact',[]); l.unshift(Object.assign({id:'ct'+Date.now(),created_at:new Date().toISOString()},payload)); LS.set('contact',l);
+    }
+  },
+
+  /* ---------------- Profil ---------------- */
+  async saveProfile(patch){
+    if(ONLINE){
+      const { error } = await sb.from('profiles').update(patch).eq('id',S.user.id);
+      if(error) throw error;
+      Object.assign(S.profile, patch);
+    } else {
+      Object.assign(S.profile, patch); LS.set('profile', S.profile);
+    }
+  },
+  async saveProDetails(table, patch){
+    if(!ONLINE){ LS.set('pro_'+table, Object.assign(LS.get('pro_'+table,{}), patch)); return; }
+    const { data } = await sb.from(table).select('id').eq('profile_id',S.user.id).limit(1);
+    if(data && data[0]) { const { error } = await sb.from(table).update(patch).eq('id',data[0].id); if(error) throw error; }
+    else { const { error } = await sb.from(table).insert(Object.assign({profile_id:S.user.id},patch)); if(error) throw error; }
+  },
+  async proDetails(table){
+    if(!ONLINE) return LS.get('pro_'+table,{});
+    const { data } = await sb.from(table).select('*').eq('profile_id',S.user.id).limit(1);
+    return (data && data[0]) || {};
+  },
+  async myProducts(){
+    if(!ONLINE) return LS.get('my_products',[]);
+    const { data } = await sb.from('products').select('*').eq('creator_id',S.user.id).order('created_at',{ascending:false});
+    return data || [];
+  }
+};
+
+/* ==========================================================================
+   6. THÈME — applique les couleurs définies dans l'administration
+   ========================================================================== */
+function applyTheme(){
+  const c = S.settings.colors || {}, i = S.settings.identity || {}, ct = S.settings.contact || {};
+  const r = document.documentElement.style;
+  if(c.primary)      { r.setProperty('--grenat', c.primary); r.setProperty('--btn', c.button || c.primary); }
+  if(c.primary_dark)   r.setProperty('--grenat-dark', c.primary_dark);
+  if(c.gold)           r.setProperty('--gold', c.gold);
+  if(c.gold_light)     r.setProperty('--gold-light', c.gold_light);
+  if(c.background)   { r.setProperty('--ivoire', c.background); r.setProperty('--bg', c.background); }
+  if(c.text)         { r.setProperty('--noir', c.text); r.setProperty('--text', c.text); }
+  if(c.button_text)    r.setProperty('--btn-text', c.button_text);
+
+  $('#brandName').textContent = i.site_name || 'DZCouture';
+  $('#brandTag').textContent  = (ct.address ? ct.address.split(',')[0] : 'Béjaïa') + ' · ' + (i.year || '2026');
+  $('#footSlogan').textContent = i.slogan || '';
+  $('#year').textContent = i.year || '2026';
+  if(i.logo_svg)      $('#logoSlot').innerHTML = i.logo_svg;
+  else if(i.logo_url) $('#logoSlot').innerHTML = `<img src="${esc(i.logo_url)}" alt="Logo ${esc(i.site_name||'DZCouture')}" style="height:42px">`;
+
+  if(ct.phone){ $('#footPhone').textContent = ct.phone; $('#footPhone').href = 'tel:'+ct.phone.replace(/\s/g,''); }
+  if(ct.email){ $('#footEmail').textContent = ct.email; $('#footEmail').href = 'mailto:'+ct.email; }
+  if(ct.address) $('#footAddr').textContent = ct.address;
+
+  const soc = S.settings.social || {};
+  $('#footSocial').innerHTML = Object.keys(soc).filter(k=>soc[k])
+    .map(k=>`<a class="chip" href="${esc(soc[k])}" target="_blank" rel="noopener">${esc(k)}</a>`).join('');
+
+  const seo = S.settings.seo || {};
+  if(seo.title) document.title = seo.title;
+  if(seo.description){ const m = document.querySelector('meta[name=description]'); if(m) m.content = seo.description; }
+}
+
+/* ==========================================================================
+   7. AUTHENTIFICATION
+   ========================================================================== */
+const ROLE_LABEL = { client:'Cliente', seamstress:'Couturière', stylist:'Styliste', supplier:'Fournisseur', admin:'Administration' };
+
+const Auth = {
+  selectedRole:'client',
+
+  open(tab, message){
+    openModal('authModal');
+    Auth.tab(tab || 'login');
+    $('#authAlert').innerHTML = message ? `<div class="alert alert--info">${esc(message)}</div>` : '';
+  },
+
+  tab(name){
+    $$('#authModal .tabs button').forEach(b=>b.classList.toggle('on', b.dataset.tab===name));
+    $('#loginForm').classList.toggle('hidden', name!=='login');
+    $('#signupForm').classList.toggle('hidden', name!=='signup');
+    $('#authTitle').textContent = name==='login' ? 'Bienvenue' : 'Rejoindre DZCouture';
+    $('#authSub').textContent = name==='login'
+      ? 'Accédez à votre espace personnel.'
+      : 'Choisissez votre profil : chaque type de compte a son propre espace.';
+  },
+
+  async signup(form){
+    const fd = new FormData(form);
+    const role = Auth.selectedRole;
+    const meta = {
+      role,
+      full_name: fd.get('full_name'),
+      phone: fd.get('phone'),
+      city: fd.get('city') || 'Béjaïa',
+      company_name: fd.get('company_name') || null
+    };
+    if(!ONLINE){
+      // Mode démonstration : compte simulé localement, aucune donnée envoyée.
+      S.user = { id:'demo-user', email:fd.get('email') };
+      S.profile = Object.assign({ id:'demo-user', role, status: role==='client'?'approved':'pending',
+                                  email:fd.get('email'), avatar_url:null, is_vip:false }, meta);
+      LS.set('profile', S.profile); LS.set('session', { user:S.user, profile:S.profile });
+      closeModal($('#authModal')); renderHeader(); toast('Compte de démonstration créé.');
+      location.hash = '#/compte'; return;
+    }
+    const { data, error } = await sb.auth.signUp({
+      email: fd.get('email'), password: fd.get('password'), options:{ data: meta }
+    });
+    if(error){ $('#authAlert').innerHTML = `<div class="alert alert--err">${esc(error.message)}</div>`; return; }
+    if(data.user && !data.session){
+      $('#authAlert').innerHTML = `<div class="alert alert--ok">Compte créé. Vérifiez votre boîte mail pour confirmer votre adresse, puis connectez-vous.</div>`;
+      form.reset(); return;
+    }
+    await Auth.loadSession();
+    closeModal($('#authModal'));
+    toast(role==='client' ? 'Bienvenue sur DZCouture.' : 'Compte créé — votre profil professionnel sera validé par l’équipe.');
+    location.hash = '#/compte';
+  },
+
+  async login(form){
+    const fd = new FormData(form);
+    if(!ONLINE){
+      const saved = LS.get('session',null);
+      if(saved){ S.user = saved.user; S.profile = saved.profile; }
+      else {
+        S.user = { id:'demo-user', email:fd.get('email') };
+        S.profile = { id:'demo-user', role:'client', status:'approved', full_name:'Cliente démo', email:fd.get('email') };
+        LS.set('session',{user:S.user,profile:S.profile});
+      }
+      closeModal($('#authModal')); renderHeader(); toast('Connexion de démonstration.'); location.hash = '#/compte'; return;
+    }
+    const { error } = await sb.auth.signInWithPassword({ email:fd.get('email'), password:fd.get('password') });
+    if(error){ $('#authAlert').innerHTML = `<div class="alert alert--err">Identifiants incorrects.</div>`; return; }
+    await Auth.loadSession();
+    closeModal($('#authModal'));
+    toast('Bonjour ' + (S.profile && S.profile.full_name ? S.profile.full_name.split(' ')[0] : '') + ' !');
+    location.hash = '#/compte';
+  },
+
+  async forgot(email){
+    if(!ONLINE){ toast('Mode démonstration : aucun email envoyé.'); return; }
+    const { error } = await sb.auth.resetPasswordForEmail(email, { redirectTo: location.origin + location.pathname });
+    if(error) toast(error.message,'err');
+    else toast('Un lien de réinitialisation vous a été envoyé.');
+  },
+
+  async logout(){
+    if(ONLINE) await sb.auth.signOut();
+    else { LS.set('session',null); }
+    S.user = null; S.profile = null; S.favorites = []; S.notifications = [];
+    renderHeader(); location.hash = '#/'; toast('À bientôt.');
+  },
+
+  async loadSession(){
+    if(!ONLINE){
+      const saved = LS.get('session',null);
+      if(saved){ S.user = saved.user; S.profile = saved.profile; }
+    } else {
+      const { data } = await sbq(sb.auth.getSession());
+      if(data && data.session){
+        S.user = data.session.user;
+        const { data:prof } = await sbq(sb.from('profiles').select('*').eq('id',S.user.id).single());
+        S.profile = prof || { id:S.user.id, role:'client', full_name:S.user.email };
+      } else { S.user = null; S.profile = null; }
+    }
+    if(S.user){ await DB.favorites(); await DB.notifications(); }
+    renderHeader();
+  }
+};
+
+/* En-tête : boutons publics ou accès à l'espace personnel */
+function renderHeader(){
+  const el = $('#headerActions');
+  syncMobileAuth();
+  if(!S.user){
+    el.innerHTML = `<button class="btn btn--ghost btn--sm" id="btnLogin">Connexion</button>
+                    <button class="btn btn--primary btn--sm" id="btnSignup">Créer un compte</button>`;
+    $('#btnLogin').onclick  = ()=>Auth.open('login');
+    $('#btnSignup').onclick = ()=>Auth.open('signup');
+  } else {
+    const unread = S.notifications.filter(n=>!n.is_read).length;
+    el.innerHTML = `
+      <button class="icon-btn" id="btnNotif" title="Notifications" aria-label="Notifications">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+          <path d="M18 8a6 6 0 1 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg>
+        ${unread?`<span class="badge-dot">${unread}</span>`:''}
+      </button>
+      <a class="btn btn--primary btn--sm" href="#/compte">Mon espace</a>
+      <button class="btn btn--ghost btn--sm" id="btnLogout">Quitter</button>`;
+    $('#btnLogout').onclick = ()=>Auth.logout();
+    $('#btnNotif').onclick  = showNotifications;
+  }
+}
+
+/* Les mêmes actions, reprises dans le menu déroulant mobile */
+function syncMobileAuth(){
+  const nav = $('#nav');
+  let box = $('.nav__auth', nav);
+  if(!box){ box = document.createElement('div'); box.className = 'nav__auth'; nav.appendChild(box); }
+  if(!S.user){
+    box.innerHTML = `<button class="btn btn--ghost btn--sm">Connexion</button>
+                     <button class="btn btn--primary btn--sm">Créer un compte</button>`;
+    box.children[0].onclick = ()=>{ nav.classList.remove('open'); Auth.open('login'); };
+    box.children[1].onclick = ()=>{ nav.classList.remove('open'); Auth.open('signup'); };
+  } else {
+    box.innerHTML = `<a class="btn btn--primary btn--sm" href="#/compte">Mon espace</a>
+                     <button class="btn btn--ghost btn--sm">Quitter</button>`;
+    box.children[1].onclick = ()=>Auth.logout();
+  }
+}
+
+async function showNotifications(){
+  const list = await DB.notifications();
+  $('#genericBody').innerHTML = `
+    <span class="eyebrow">Notifications</span>
+    <h2 style="margin-bottom:18px">Vos alertes</h2>
+    ${list.length ? list.map(n=>`
+      <div class="list-item">
+        <div class="list-item__main">
+          <b>${esc(n.title)}</b>
+          <small>${esc(n.body||'')} · ${dateFr(n.created_at)}</small>
+        </div>
+        ${n.is_read?'':'<span class="tag tag--gold">Nouveau</span>'}
+      </div>`).join('')
+    : `<div class="empty"><p>Aucune notification pour le moment.</p></div>`}`;
+  openModal('genericModal');
+  for(const n of list.filter(x=>!x.is_read)) await DB.readNotification(n.id);
+  S.notifications.forEach(n=>n.is_read=true); renderHeader();
+}
+
+/* ==========================================================================
+   8. COMPOSANTS RÉUTILISABLES
+   ========================================================================== */
+function productCard(p){
+  const fav = S.favorites.includes(p.id);
+  return `<article class="card reveal" data-product="${esc(p.slug)}">
+    <div class="card__media">
+      ${p.cover_url ? `<img src="${esc(p.cover_url)}" alt="${esc(p.name)}" loading="lazy">` : silhouette({belt:true})}
+      <div class="card__badges">
+        ${p.is_modular?'<span class="tag tag--gold">Modulable</span>':''}
+        ${p.is_couture?'<span class="tag">Haute couture</span>':''}
+        ${p.is_demo?'<span class="tag tag--demo">Démo</span>':''}
+      </div>
+      <button class="fav ${fav?'on':''}" data-fav="${esc(p.id)}" aria-label="Ajouter aux favoris">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5A0F24" stroke-width="1.6">
+          <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1L12 21l7.7-7.6 1.1-1a5.5 5.5 0 0 0 0-7.8z"/></svg>
+      </button>
+    </div>
+    <div class="card__body">
+      <div class="card__meta">${esc((S.categories.find(c=>c.id===p.category_id)||{}).name || 'DZCouture')}</div>
+      <h3 class="card__title">${esc(p.name)}</h3>
+      <p class="muted" style="font-size:.88rem;margin:0">${esc((p.description||'').slice(0,92))}${(p.description||'').length>92?'…':''}</p>
+      <div class="card__foot">
+        <span class="card__price">${money(p.price,p.currency)}</span>
+        <a class="btn btn--ghost btn--sm" href="#/produit/${esc(p.slug)}">Découvrir</a>
+      </div>
+      ${(p.configurations||[]).length ? `<p class="muted" style="font-size:.76rem;margin:10px 0 0">${p.configurations.length} configurations disponibles</p>`:''}
+    </div>
+  </article>`;
+}
+
+function proCard(r, kind){
+  const prof = r.profile || {};
+  const name = r.company_name || prof.display_name || prof.full_name || 'Professionnel';
+  const specs = (r.specialties||[]).slice(0,3);
+  return `<article class="pro reveal">
+    ${prof.avatar_url || r.logo_url
+      ? `<img class="avatar" src="${esc(prof.avatar_url||r.logo_url)}" alt="${esc(name)}">`
+      : `<div class="avatar">${esc(initials(name))}</div>`}
+    <div style="flex:1;min-width:0">
+      <h3 style="margin:0 0 2px;font-size:1.25rem">${esc(name)}</h3>
+      <div class="card__meta">${esc(r.city || prof.city || 'Béjaïa')}${r.experience_years?` · ${r.experience_years} ans d'expérience`:''}</div>
+      <p class="muted" style="font-size:.9rem;margin:6px 0 10px">${esc((r.headline || r.description || r.biography || '').slice(0,130))}</p>
+      <div class="chips" style="margin-bottom:12px">${specs.map(s=>`<span class="tag">${esc(s)}</span>`).join('')}</div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <button class="btn btn--ghost btn--sm" data-pro-view="${esc(r.id)}" data-kind="${kind}">Voir le profil</button>
+        <button class="btn btn--primary btn--sm" data-pro-request="${esc(r.profile_id||'')}" data-name="${esc(name)}" data-kind="${kind}">
+          ${kind==='stylists'?'Demander un conseil':kind==='suppliers'?'Contacter':'Demander un service'}
+        </button>
+      </div>
+    </div>
+  </article>`;
+}
+
+function emptyPros(kind){
+  const what = kind==='stylists'?'styliste':kind==='suppliers'?'fournisseur':'couturière';
+  return `<div class="empty">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg>
+    <h3>Aucun profil publié pour l'instant</h3>
+    <p class="muted">Les profils apparaissent ici dès qu'un compte ${what} est validé par l'administration.<br>
+    Vous êtes ${what} ? Créez votre profil professionnel.</p>
+    <button class="btn btn--primary btn--sm" data-open-signup style="margin-top:12px">Créer mon profil</button>
+  </div>`;
+}
+
+function pageHead(eyebrow, title, lead){
+  return `<section class="section--tight" style="padding-top:56px">
+    <div class="wrap">
+      <span class="eyebrow">${esc(eyebrow)}</span>
+      <h1 style="font-size:clamp(2rem,4vw,3.2rem);margin-bottom:10px">${esc(title)}</h1>
+      <div class="rule"></div>
+      ${lead?`<p class="lead">${esc(lead)}</p>`:''}
+    </div>
+  </section>`;
+}
+
+const demoBanner = `<div class="wrap" style="margin-bottom:26px"><div class="demo-note">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="flex:0 0 auto">
+    <circle cx="12" cy="12" r="9"/><path d="M12 8h.01M11 12h1v4h1"/></svg>
+  <span><b>Données de démonstration.</b> Les pièces présentées servent à illustrer le fonctionnement de la plateforme ;
+  aucun professionnel réel n'est répertorié tant que les comptes ne sont pas créés et validés.</span>
+</div></div>`;
+
+/* ==========================================================================
+   9. VUES PUBLIQUES
+   ========================================================================== */
+const Views = {};
+
+Views.home = async () => {
+  const [prods, cols] = await Promise.all([DB.products(), DB.collections()]);
+  const hero = S.sections.hero || {}, inno = S.sections.innovation || {}, com = S.sections.community || {};
+  const featured = prods.filter(p=>p.is_featured).slice(0,4);
+  const steps = (inno.content && inno.content.steps) || ['Robe de base','+ Module','Look élégant','+ Module','Look de soirée'];
+
+  return `
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero__grid">
+      <div>
+        <span class="eyebrow">DZCouture · Béjaïa · ${esc((S.settings.identity||{}).year||'2026')}</span>
+        <h1>${esc((hero.title||'Une pièce. Plusieurs styles.').split('.')[0])}.<br><em>${esc((hero.title||'Une pièce. Plusieurs styles.').split('.').slice(1).join('.').trim()||'Plusieurs styles')}</em></h1>
+        <p class="hero__sub">${esc(hero.subtitle||'')}</p>
+        <div class="hero__cta">
+          <a class="btn btn--gold" href="#/collections">${esc((hero.content&&hero.content.cta1)||'Découvrir les collections')}</a>
+          <button class="btn btn--light" data-open-signup>${esc((hero.content&&hero.content.cta2)||'Créer mon compte')}</button>
+        </div>
+        <div class="hero__stats">
+          <div class="hero__stat"><b>4</b><span>Profils professionnels</span></div>
+          <div class="hero__stat"><b>1 → 4</b><span>Looks par pièce modulable</span></div>
+          <div class="hero__stat"><b>100%</b><span>Site consultable sans compte</span></div>
+        </div>
+      </div>
+      <div>
+        <div class="modular" id="heroModular">
+          ${silhouette({}, {stroke:'#F8F4EC', gold:'#E4C766'})}
+          <div class="modular__label"><b id="heroLookName">Look 1 — Sortie</b><span id="heroLookOcc">Quotidien</span></div>
+        </div>
+        <div class="modular__dots" id="heroDots"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INNOVATION -->
+  <section class="section" id="innovation">
+    <div class="wrap">
+      <div class="center" style="max-width:760px;margin:0 auto">
+        <span class="eyebrow">L'innovation DZCouture</span>
+        <h2>${esc(inno.title||'Une pièce. Plusieurs possibilités.')}</h2>
+        <div class="rule center"></div>
+        <p class="lead center">${esc(inno.subtitle||'')}</p>
+      </div>
+      <div class="flow">
+        ${steps.map((s,i)=>`<div class="flow__step reveal" style="transition-delay:${i*90}ms">
+          <span>Étape ${i+1}</span><b>${esc(s)}</b>
+        </div>`).join('')}
+      </div>
+      <div class="center" style="margin-top:38px">
+        <a class="btn btn--ghost" href="#/innovation">Comprendre le vêtement modulable</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PIÈCES EN VEDETTE -->
+  <section class="section" style="background:var(--surface-2)">
+    <div class="wrap">
+      <div class="panel__head" style="border:none;padding:0;background:none;margin-bottom:28px">
+        <div><span class="eyebrow">Sélection</span><h2 style="margin:0">Pièces en vedette</h2></div>
+        <a class="btn btn--ghost btn--sm" href="#/vetements">Tous les vêtements</a>
+      </div>
+      ${demoBanner.replace('<div class="wrap" style="margin-bottom:26px">','<div style="margin-bottom:26px">').replace('</div></div>','</div>')}
+      <div class="grid grid--4">${featured.map(productCard).join('')}</div>
+    </div>
+  </section>
+
+  <!-- COMMUNAUTÉ / ÉCOSYSTÈME -->
+  <section class="section dark">
+    <div class="wrap" style="position:relative;z-index:2">
+      <div class="center" style="max-width:740px;margin:0 auto 46px">
+        <span class="eyebrow">La communauté</span>
+        <h2>${esc(com.title||"Un écosystème, quatre façons d'y entrer")}</h2>
+        <div class="rule center"></div>
+        <p class="muted">${esc(com.subtitle||'')}</p>
+      </div>
+      <div class="grid grid--4">
+        ${[
+          {t:'Vous cherchez un vêtement ?',r:'client',b:'Je suis cliente',d:'Découvrez, sauvegardez, composez votre garde-robe et faites appel aux professionnels.',
+           i:'<path d="M6 2 3 6v14h18V6l-3-4z"/><path d="M3 6h18M16 10a4 4 0 0 1-8 0"/>'},
+          {t:'Vous créez des vêtements ?',r:'seamstress',b:'Je suis couturière',d:'Présentez vos créations, vos services et recevez des demandes de personnalisation.',
+           i:'<path d="M12 2v20M8 6l8 12M16 6 8 18"/>'},
+          {t:'Vous conseillez en mode ?',r:'stylist',b:'Je suis styliste',d:'Proposez conseils, looks, accompagnement et garde-robe capsule.',
+           i:'<circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/>'},
+          {t:'Vous fournissez des matières ?',r:'supplier',b:'Je suis fournisseur',d:'Faites connaître vos tissus, matières et accessoires aux créateurs.',
+           i:'<path d="M3 7h18v13H3zM3 7l3-4h12l3 4M12 11v5"/>'}
+        ].map(e=>`
+        <div class="eco reveal" style="background:rgba(248,244,236,.06);border-color:rgba(201,162,39,.25)">
+          <div class="eco__icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5">${e.i}</svg></div>
+          <h3 style="color:var(--ivoire);font-size:1.15rem">${e.t}</h3>
+          <p class="muted" style="font-size:.9rem">${e.d}</p>
+          <button class="btn btn--light btn--sm" data-open-signup data-signup-role="${e.r}">${e.b}</button>
+        </div>`).join('')}
+      </div>
+    </div>
+  </section>
+
+  <!-- COLLECTIONS -->
+  <section class="section">
+    <div class="wrap">
+      <div class="panel__head" style="border:none;padding:0;background:none;margin-bottom:28px">
+        <div><span class="eyebrow">Collections</span><h2 style="margin:0">Nos univers</h2></div>
+        <a class="btn btn--ghost btn--sm" href="#/collections">Toutes les collections</a>
+      </div>
+      <div class="grid grid--2">
+        ${cols.map(c=>`<a class="card reveal" href="#/vetements?collection=${esc(c.slug)}">
+          <div class="card__media" style="aspect-ratio:16/10">${c.cover_url?`<img src="${esc(c.cover_url)}" alt="${esc(c.name)}">`:silhouette({cape:true,skirt:true})}</div>
+          <div class="card__body">
+            <div class="card__meta">${esc(c.season||'')}</div>
+            <h3 class="card__title">${esc(c.name)}</h3>
+            <p class="muted" style="font-size:.9rem;margin:0">${esc(c.description||'')}</p>
+          </div></a>`).join('')}
+      </div>
+    </div>
+  </section>
+
+  <!-- VIP -->
+  <section class="section" style="background:var(--surface-2)">
+    <div class="wrap grid grid--2" style="align-items:center;gap:52px">
+      <div>
+        <span class="eyebrow">Service premium</span>
+        <h2>${esc((S.sections.vip||{}).title||'DZCouture VIP')}</h2>
+        <div class="rule"></div>
+        <p class="lead">${esc((S.sections.vip||{}).subtitle||'Un accompagnement personnalisé par un styliste dédié.')}</p>
+        <div class="chips" style="margin:22px 0">
+          ${['Styliste personnel','Organisation de garde-robe','Garde-robe capsule','Création de looks','Accompagnement événement']
+            .map(x=>`<span class="tag">${esc(x)}</span>`).join('')}
+        </div>
+        <a class="btn btn--primary" href="#/vip">Découvrir DZCouture VIP</a>
+      </div>
+      <div class="card" style="padding:34px;background:linear-gradient(150deg,var(--grenat-dark),var(--grenat));color:var(--ivoire);border-color:var(--line-gold)">
+        <h3 style="color:var(--gold-light)">L'élégance, accompagnée</h3>
+        <p class="muted" style="color:rgba(248,244,236,.72)">Un styliste vous suit, compose vos looks et construit avec vous une garde-robe qui vous ressemble — sans multiplier les achats.</p>
+        <div style="display:flex;gap:26px;margin-top:22px;flex-wrap:wrap">
+          <div><b style="font-family:var(--serif);font-size:1.9rem;color:var(--gold-light);display:block">1 : 1</b><span style="font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(248,244,236,.6)">Suivi personnel</span></div>
+          <div><b style="font-family:var(--serif);font-size:1.9rem;color:var(--gold-light);display:block">Capsule</b><span style="font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(248,244,236,.6)">Garde-robe optimisée</span></div>
+        </div>
+      </div>
+    </div>
+  </section>`;
+};
+
+Views.innovation = async () => {
+  const prods = await DB.products();
+  const modular = prods.filter(p=>p.is_modular);
+  return `
+  ${pageHead('Le concept', 'Une pièce. Plusieurs possibilités.',
+    "Le vêtement modulable est le cœur de DZCouture : une base bien coupée, des modules amovibles, et une même pièce traverse la journée, le bureau, la fête et la soirée.")}
+  <section class="section--tight">
+    <div class="wrap grid grid--2" style="gap:48px;align-items:center">
+      <div class="card" style="padding:0;overflow:hidden">
+        <div class="card__media" style="aspect-ratio:1/1;padding:30px">${silhouette({sleeves:true,belt:true})}</div>
+      </div>
+      <div>
+        <h2>Comment ça marche</h2>
+        <div class="rule"></div>
+        <ol style="padding-left:18px;line-height:2">
+          <li><b>La base.</b> Une pièce essentielle, coupée pour durer.</li>
+          <li><b>Les modules.</b> Manches, cape, col, ceinture, sur-jupe : chacun se fixe et se retire.</li>
+          <li><b>Les configurations.</b> Chaque combinaison de modules donne un look nommé.</li>
+          <li><b>Votre garde-robe.</b> Moins de pièces, plus de tenues — et moins d'achats superflus.</li>
+        </ol>
+        <a class="btn btn--primary" href="#/vetements" style="margin-top:14px">Voir les pièces modulables</a>
+      </div>
+    </div>
+  </section>
+  <section class="section dark">
+    <div class="wrap">
+      <div class="center" style="max-width:700px;margin:0 auto 42px">
+        <span class="eyebrow">Transformation</span><h2>De la sortie à la soirée</h2>
+        <p class="muted">Sélectionnez une configuration pour voir la pièce évoluer.</p>
+      </div>
+      <div class="grid grid--4">
+        ${[{n:'Robe de base',o:'Quotidien',k:{}},{n:'+ Manches',o:'Élégant',k:{sleeves:true,belt:true}},
+           {n:'+ Ceinture & col',o:'Fête',k:{sleeves:true,belt:true,collar:true}},{n:'+ Cape & sur-jupe',o:'Soirée',k:{cape:true,skirt:true,belt:true}}]
+          .map(x=>`<div class="card reveal" style="background:rgba(248,244,236,.06);border-color:rgba(201,162,39,.25)">
+            <div class="card__media" style="background:transparent;aspect-ratio:3/4;padding:18px">${silhouette(x.k,{stroke:'#F8F4EC',gold:'#E4C766'})}</div>
+            <div class="card__body"><div class="card__meta">${esc(x.o)}</div><h3 class="card__title" style="color:var(--ivoire)">${esc(x.n)}</h3></div>
+          </div>`).join('')}
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="wrap">
+      <span class="eyebrow">Sur la plateforme</span>
+      <h2>Les pièces modulables disponibles</h2>
+      <div class="rule"></div>
+      <div class="grid grid--4" style="margin-top:30px">${modular.map(productCard).join('')}</div>
+    </div>
+  </section>`;
+};
+
+Views.collections = async () => {
+  const [cols, prods] = await Promise.all([DB.collections(), DB.products()]);
+  return `
+  ${pageHead('Univers DZCouture','Collections','Des ensembles pensés pour se combiner entre eux, saison après saison.')}
+  ${demoBanner}
+  <section class="section--tight"><div class="wrap">
+    ${cols.map(c=>{
+      const items = prods.filter(p=>p.collection_id===c.id);
+      return `<div style="margin-bottom:56px">
+        <div class="panel__head" style="border:none;padding:0;background:none">
+          <div><span class="eyebrow">${esc(c.season||'Collection')}</span><h2 style="margin:0">${esc(c.name)}</h2>
+          <p class="muted" style="max-width:62ch;margin:8px 0 0">${esc(c.description||'')}</p></div>
+          <a class="btn btn--ghost btn--sm" href="#/vetements?collection=${esc(c.slug)}">Voir tout</a>
+        </div>
+        <div class="grid grid--4" style="margin-top:24px">${items.map(productCard).join('') || '<p class="muted">Collection en préparation.</p>'}</div>
+      </div>`;
+    }).join('')}
+  </div></section>`;
+};
+
+Views.vetements = async (params) => {
+  const [prods, cats, cols] = await Promise.all([DB.products(), DB.categories(), DB.collections()]);
+  return `
+  ${pageHead('Catalogue','Vêtements','Robes, ensembles, pièces modulables, haute couture et sur mesure.')}
+  <section class="section--tight"><div class="wrap">
+    <div class="filters">
+      <div class="field"><label>Recherche</label><input class="input" id="fSearch" placeholder="Nom, matière, description…"></div>
+      <div class="field"><label>Catégorie</label>
+        <select class="input" id="fCat"><option value="">Toutes</option>${cats.map(c=>`<option value="${esc(c.id)}">${esc(c.name)}</option>`).join('')}</select></div>
+      <div class="field"><label>Collection</label>
+        <select class="input" id="fCol"><option value="">Toutes</option>${cols.map(c=>`<option value="${esc(c.id)}" ${params.collection===c.slug?'selected':''}>${esc(c.name)}</option>`).join('')}</select></div>
+      <div class="field"><label>Type</label>
+        <select class="input" id="fType"><option value="">Tous</option><option value="modular">Modulable</option><option value="couture">Haute couture</option></select></div>
+      <div class="field"><label>Tri</label>
+        <select class="input" id="fSort"><option value="pos">Sélection</option><option value="asc">Prix croissant</option><option value="desc">Prix décroissant</option></select></div>
+    </div>
+    <p class="muted" id="countLine" style="font-size:.86rem"></p>
+    <div class="grid grid--4" id="productGrid"></div>
+  </div></section>`;
+};
+
+Views.produit = async (params) => {
+  const p = await DB.product(params.slug);
+  if(!p) return `${pageHead('Introuvable','Cette pièce n\'existe pas','Elle a peut-être été retirée du catalogue.')}
+    <div class="wrap" style="padding-bottom:80px"><a class="btn btn--primary" href="#/vetements">Retour au catalogue</a></div>`;
+  const cat = (S.categories.find(c=>c.id===p.category_id)||{}).name || '';
+  const confs = p.configurations || [];
+  const mods  = p.modules || [];
+  return `
+  <section class="section--tight" style="padding-top:44px"><div class="wrap">
+    <a class="muted" href="#/vetements" style="font-size:.84rem">← Retour aux vêtements</a>
+    <div class="product" style="margin-top:22px">
+      <div class="product__media" id="pMedia">${silhouette({})}</div>
+      <div>
+        <span class="eyebrow">${esc(cat)}${p.is_demo?' · Donnée de démonstration':''}</span>
+        <h1 style="font-size:clamp(2rem,3.6vw,3rem);margin-bottom:6px">${esc(p.name)}</h1>
+        <div class="chips" style="margin-bottom:16px">
+          ${p.is_modular?'<span class="tag tag--gold">Modulable</span>':''}
+          ${p.is_couture?'<span class="tag">Haute couture</span>':''}
+          <span class="tag">${p.availability==='on_demand'?'Sur commande':p.availability==='sold_out'?'Épuisé':'Disponible'}</span>
+        </div>
+        <p class="lead">${esc(p.description||'')}</p>
+        ${p.story?`<p class="muted" style="font-size:.92rem">${esc(p.story)}</p>`:''}
+
+        ${confs.length?`
+        <h3 style="margin-top:26px">Configurations</h3>
+        <p class="muted" style="font-size:.88rem;margin-top:-6px">Une même pièce, plusieurs registres. Sélectionnez un look.</p>
+        <div class="conf-list">
+          ${confs.map((c,i)=>`<div class="conf ${i===0?'on':''}" data-conf="${esc(c.id)}">
+            <div style="flex:1"><b>${esc(c.name)}</b><div class="muted" style="font-size:.88rem">${esc(c.description||'')}</div></div>
+            <span class="tag">${esc(c.occasion||'')}</span>
+          </div>`).join('')}
+        </div>`:''}
+
+        ${mods.length?`
+        <h3 style="margin-top:22px">Modules</h3>
+        <div class="conf-list">
+          ${mods.map(m=>`<div class="mod" data-mod="${esc(m.id)}" data-price="${m.price_delta||0}" data-name="${esc(m.name)}">
+            <div><b>${esc(m.name)}</b><br><small>${esc(m.description||'')}</small></div>
+            <span class="card__price" style="font-size:1rem">+ ${money(m.price_delta||0,p.currency)}</span>
+          </div>`).join('')}
+        </div>`:''}
+
+        <div class="price-box">
+          <div><span class="muted" style="font-size:.74rem;letter-spacing:.18em;text-transform:uppercase">Total configuration</span>
+            <b id="pTotal">${money(p.price,p.currency)}</b></div>
+          <button class="fav ${S.favorites.includes(p.id)?'on':''}" data-fav="${esc(p.id)}" style="position:static">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5A0F24" stroke-width="1.6">
+              <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1L12 21l7.7-7.6 1.1-1a5.5 5.5 0 0 0 0-7.8z"/></svg>
+          </button>
+        </div>
+
+        <div style="display:flex;gap:12px;flex-wrap:wrap">
+          <button class="btn btn--primary" data-request-product="${esc(p.id)}" data-name="${esc(p.name)}">Demander cette pièce</button>
+          <button class="btn btn--ghost" data-add-wardrobe="${esc(p.id)}" data-name="${esc(p.name)}">Ajouter à ma garde-robe</button>
+        </div>
+
+        <div class="specs">
+          <div>Matière</div><div>${esc(p.material||'—')}</div>
+          <div>Couleurs</div><div>${(p.colors||[]).map(esc).join(', ')||'—'}</div>
+          <div>Tailles</div><div>${(p.sizes||[]).map(esc).join(', ')||'—'}</div>
+          <div>Caractéristiques</div><div>${(p.features||[]).map(esc).join(' · ')||'—'}</div>
+        </div>
+        ${p.is_demo?`<p class="muted" style="font-size:.8rem;margin-top:16px">Pièce de démonstration : le prix et les visuels sont indicatifs.</p>`:''}
+      </div>
+    </div>
+  </div></section>`;
+};
+
+Views.pros = (kind) => async () => {
+  const meta = {
+    seamstresses:{eyebrow:'Savoir-faire',title:'Trouver une couturière',lead:"Sur mesure, haute couture, retouches, personnalisation et transformation de vêtements."},
+    stylists:{eyebrow:'Conseil',title:'Trouver un styliste',lead:"Conseil vestimentaire, couleurs, création de looks, garde-robe capsule et accompagnement VIP."},
+    suppliers:{eyebrow:'Matières',title:'Nos fournisseurs',lead:"Tissus, matières, accessoires et composants pour les créateurs de la plateforme."}
+  }[kind];
+  const rows = await DB.pros(kind);
+  const cities = Array.from(new Set(rows.map(r=>r.city).filter(Boolean)));
+  const specs  = Array.from(new Set(rows.flatMap(r=>r.specialties||[])));
+  return `
+  ${pageHead(meta.eyebrow, meta.title, meta.lead)}
+  <section class="section--tight"><div class="wrap">
+    <div class="filters">
+      <div class="field"><label>Recherche</label><input class="input" id="proSearch" placeholder="Nom, spécialité…"></div>
+      <div class="field"><label>Localisation</label><select class="input" id="proCity"><option value="">Toutes</option>${cities.map(c=>`<option>${esc(c)}</option>`).join('')}</select></div>
+      <div class="field"><label>Spécialité</label><select class="input" id="proSpec"><option value="">Toutes</option>${specs.map(c=>`<option>${esc(c)}</option>`).join('')}</select></div>
+      ${kind!=='suppliers'?`<div class="field"><label>Disponibilité</label><select class="input" id="proAvail">
+        <option value="">Toutes</option><option value="available">Disponible</option><option value="busy">Occupée</option></select></div>`:''}
+    </div>
+    <div class="grid grid--2" id="proGrid" data-kind="${kind}">
+      ${rows.length ? rows.map(r=>proCard(r,kind)).join('') : emptyPros(kind)}
+    </div>
+  </div></section>`;
+};
+
+Views.ateliers = async () => {
+  const rows = await DB.workshops();
+  return `
+  ${pageHead('Fabrication','Nos ateliers','Les ateliers partenaires où les pièces prennent forme.')}
+  ${demoBanner}
+  <section class="section--tight"><div class="wrap"><div class="grid grid--3">
+    ${rows.map(w=>`<article class="card reveal">
+      <div class="card__media" style="aspect-ratio:4/3">${silhouette({sleeves:true})}</div>
+      <div class="card__body">
+        <div class="card__meta">${esc(w.city||'Béjaïa')}</div>
+        <h3 class="card__title">${esc(w.name)}${w.is_demo?' <span class="tag tag--demo">Démo</span>':''}</h3>
+        <p class="muted" style="font-size:.9rem">${esc(w.description||'')}</p>
+        <div class="chips">${(w.specialties||[]).map(s=>`<span class="tag">${esc(s)}</span>`).join('')}</div>
+      </div></article>`).join('')}
+  </div></div></section>`;
+};
+
+Views.vip = async () => `
+  ${pageHead('Service premium','DZCouture VIP','Un styliste personnel, une garde-robe pensée pour vous, un accompagnement de bout en bout.')}
+  <section class="section--tight"><div class="wrap grid grid--3">
+    ${[
+      {t:'Styliste personnel',d:"Un interlocuteur unique qui connaît vos goûts, vos contraintes et votre morphologie."},
+      {t:'Organisation de garde-robe',d:"Tri, structuration et mise en valeur de ce que vous possédez déjà."},
+      {t:'Garde-robe capsule',d:"Un ensemble restreint de pièces qui se combinent entre elles pour toutes les occasions."},
+      {t:'Création de looks',d:"Des tenues composées à l'avance, prêtes à porter selon l'occasion."},
+      {t:'Conseils de style',d:"Couleurs, coupes, matières : les repères qui vous vont vraiment."},
+      {t:'Accompagnement événement',d:"Mariage, cérémonie, gala : une préparation complète jusqu'au jour J."}
+    ].map(x=>`<div class="eco reveal"><h3>${esc(x.t)}</h3><p class="muted" style="font-size:.93rem;margin:0">${esc(x.d)}</p></div>`).join('')}
+  </div></section>
+  <section class="section dark"><div class="wrap center" style="position:relative;z-index:2;max-width:680px;margin:0 auto">
+    <span class="eyebrow">Rejoindre le cercle</span>
+    <h2>Un accompagnement, pas un abonnement de plus</h2>
+    <p class="muted">Créez votre compte, décrivez vos besoins : un styliste DZCouture vous répond depuis votre espace personnel.</p>
+    <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:24px">
+      <button class="btn btn--gold" data-open-signup>Créer mon compte</button>
+      <a class="btn btn--light" href="#/stylistes">Voir les stylistes</a>
+    </div>
+  </div></section>`;
+
+Views.videos = async () => {
+  const rows = await DB.videos();
+  const cats = Array.from(new Set(rows.map(v=>v.category).filter(Boolean)));
+  return `
+  ${pageHead('Apprendre','Conseils & tutoriels','Transformer une pièce, utiliser les modules, composer un look, organiser sa garde-robe.')}
+  ${demoBanner}
+  <section class="section--tight"><div class="wrap">
+    <div class="chips" style="margin-bottom:26px"><span class="chip on" data-vcat="">Tout</span>${cats.map(c=>`<span class="chip" data-vcat="${esc(c)}">${esc(c)}</span>`).join('')}</div>
+    <div class="grid grid--3" id="videoGrid">
+      ${rows.map(v=>`<article class="card reveal" data-cat="${esc(v.category||'')}">
+        <div class="card__media" style="aspect-ratio:16/9;background:linear-gradient(150deg,var(--grenat-dark),var(--grenat))">
+          <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="#E4C766" stroke-width="1.2" style="opacity:1;width:52px">
+            <circle cx="12" cy="12" r="10"/><path d="M10 8l6 4-6 4z" fill="#E4C766" stroke="none"/></svg>
+        </div>
+        <div class="card__body">
+          <div class="card__meta">${esc(v.category||'Conseils')}</div>
+          <h3 class="card__title">${esc(v.title)}</h3>
+          <p class="muted" style="font-size:.9rem;margin:0">${esc(v.description||'')}</p>
+          ${v.url?`<a class="btn btn--ghost btn--sm" style="margin-top:14px" href="${esc(v.url)}" target="_blank" rel="noopener">Regarder</a>`
+                 :`<p class="muted" style="font-size:.78rem;margin:12px 0 0">Vidéo à venir — publiée depuis l'administration.</p>`}
+        </div></article>`).join('')}
+    </div>
+  </div></section>`;
+};
+
+Views.contact = async () => {
+  const c = S.settings.contact || {};
+  return `
+  ${pageHead('Nous écrire','Contact','Une question sur une pièce, un service ou un partenariat ? Écrivez-nous.')}
+  <section class="section--tight"><div class="wrap grid grid--2" style="gap:44px;align-items:start">
+    <form class="panel" id="contactForm">
+      <h3>Envoyer un message</h3>
+      <div class="form-row form-row--2">
+        <div class="field"><label>Nom</label><input class="input" name="name" required></div>
+        <div class="field"><label>Email</label><input class="input" type="email" name="email" required></div>
+      </div>
+      <div class="form-row form-row--2">
+        <div class="field"><label>Téléphone</label><input class="input" name="phone"></div>
+        <div class="field"><label>Sujet</label><input class="input" name="subject"></div>
+      </div>
+      <div class="form-row"><div class="field"><label>Message</label><textarea class="input" name="message" required></textarea></div></div>
+      <button class="btn btn--primary btn--block" type="submit">Envoyer</button>
+    </form>
+    <div>
+      <div class="panel">
+        <h3>DZCouture</h3>
+        <p class="muted" style="margin-bottom:18px">${esc((S.settings.identity||{}).baseline||'')}</p>
+        <div class="list-item"><div class="list-item__main"><b>Téléphone</b><small>${esc(c.phone||'')}</small></div></div>
+        <div class="list-item"><div class="list-item__main"><b>Email</b><small>${esc(c.email||'')}</small></div></div>
+        <div class="list-item"><div class="list-item__main"><b>Adresse</b><small>${esc(c.address||'')}</small></div></div>
+        <div class="list-item"><div class="list-item__main"><b>Horaires</b><small>${esc(c.hours||'')}</small></div></div>
+      </div>
+      <div class="panel">
+        <h3>Rejoindre la plateforme</h3>
+        <p class="muted" style="font-size:.93rem">Couturière, styliste ou fournisseur : créez votre profil professionnel. Il est publié après validation par l'équipe DZCouture.</p>
+        <button class="btn btn--primary btn--sm" data-open-signup>Créer un profil professionnel</button>
+      </div>
+    </div>
+  </div></section>`;
+};
+
+/* ==========================================================================
+   10. ESPACES PERSONNELS (client, couturière, styliste, fournisseur)
+   ========================================================================== */
+const ICONS = {
+  home:'<path d="M3 10 12 3l9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1z"/>',
+  hanger:'<path d="M12 5a2 2 0 1 1 2 2c-1 0-2 .7-2 2v1M12 10 3 17h18z"/>',
+  capsule:'<rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M9 4v16"/>',
+  heart:'<path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8z"/>',
+  file:'<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/>',
+  chat:'<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>',
+  bell:'<path d="M18 8a6 6 0 1 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/>',
+  user:'<circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/>',
+  box:'<path d="M3 7h18v13H3zM3 7l3-4h12l3 4M12 11v5"/>',
+  star:'<path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1-5.4-2.9-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/>',
+  calendar:'<rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/>'
+};
+
+function dashMenu(role){
+  const common = [
+    ['','Tableau de bord','home'],
+    ['favoris','Mes favoris','heart'],
+    ['messages','Mes conversations','chat'],
+    ['notifications','Mes notifications','bell'],
+    ['profil','Mon profil','user']
+  ];
+  const byRole = {
+    client: [
+      ['','Mon espace','home'],
+      ['garde-robe','Ma garde-robe','hanger'],
+      ['capsule','Ma garde-robe capsule','capsule'],
+      ['favoris','Mes favoris','heart'],
+      ['demandes','Mes demandes','file'],
+      ['messages','Mes conversations','chat'],
+      ['notifications','Mes notifications','bell'],
+      ['profil','Mon profil','user']
+    ],
+    seamstress: [
+      ['','Mon dashboard','home'],
+      ['profil-pro','Mon profil professionnel','user'],
+      ['services','Mes services','star'],
+      ['portfolio','Mon portfolio','file'],
+      ['demandes','Mes demandes','file'],
+      ['messages','Mes conversations','chat'],
+      ['disponibilites','Mes disponibilités','calendar'],
+      ['profil','Paramètres','user']
+    ],
+    stylist: [
+      ['','Mon dashboard','home'],
+      ['profil-pro','Mon profil professionnel','user'],
+      ['services','Mes services','star'],
+      ['portfolio','Mon portfolio','file'],
+      ['demandes','Mes clientes / demandes','file'],
+      ['messages','Mes conversations','chat'],
+      ['disponibilites','Mes disponibilités','calendar'],
+      ['profil','Paramètres','user']
+    ],
+    supplier: [
+      ['','Mon dashboard','home'],
+      ['profil-pro','Mon profil entreprise','user'],
+      ['produits','Mes produits','box'],
+      ['catalogue','Mon catalogue','file'],
+      ['demandes','Mes demandes','file'],
+      ['messages','Mes conversations','chat'],
+      ['profil','Paramètres','user']
+    ]
+  };
+  return byRole[role] || common;
+}
+
+function dashShell(sub, inner){
+  const p = S.profile || {};
+  const menu = dashMenu(p.role);
+  const pending = p.status === 'pending' && p.role !== 'client';
+  return `<div class="wrap dash">
+    <aside class="dash__side">
+      <div class="dash__user">
+        ${p.avatar_url ? `<img class="avatar" style="margin:0 auto" src="${esc(p.avatar_url)}" alt="">`
+                       : `<div class="avatar" style="margin:0 auto">${esc(initials(p.full_name||p.email))}</div>`}
+        <b>${esc(p.full_name || p.display_name || 'Mon compte')}</b>
+        <span>${esc(ROLE_LABEL[p.role] || 'Compte')}${p.is_vip?' · VIP':''}</span>
+      </div>
+      <nav class="dash__nav">
+        ${menu.map(([slug,label,icon])=>`
+          <a href="#/compte${slug?'/'+slug:''}" class="${sub===slug?'active':''}">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6">${ICONS[icon]||ICONS.home}</svg>${esc(label)}
+          </a>`).join('')}
+      </nav>
+    </aside>
+    <div>
+      ${pending?`<div class="alert alert--info" style="margin-bottom:20px">
+        Votre profil professionnel est en cours de validation par l'équipe DZCouture. Vous pouvez déjà le compléter :
+        il sera visible publiquement une fois approuvé.</div>`:''}
+      ${p.status==='suspended'?`<div class="alert alert--err" style="margin-bottom:20px">Votre profil est suspendu. Contactez l'administration.</div>`:''}
+      ${inner}
+    </div>
+  </div>`;
+}
+
+Views.compte = async (params) => {
+  if(!S.user) { compteAuthTimer = setTimeout(()=>Auth.open('login','Connectez-vous pour accéder à votre espace.'),50);
+    return pageHead('Espace personnel','Connexion requise','Créez un compte ou connectez-vous pour accéder à votre espace DZCouture.'); }
+  const sub = params.sub || '';
+  const role = (S.profile||{}).role || 'client';
+  const body = await (DashViews[sub] || DashViews.index)(role);
+  return dashShell(sub, body);
+};
+
+const DashViews = {
+
+  async index(role){
+    const [favs, items, reqs, convs, prods] = await Promise.all([
+      DB.favorites(), DB.wardrobeItems(), DB.requests(), DB.conversations(), DB.products()
+    ]);
+    const p = S.profile || {};
+    const isPro = role !== 'client';
+    const mine = isPro ? reqs.filter(r=>r.provider_id===S.user.id) : reqs;
+    const stats = isPro
+      ? [[mine.filter(r=>r.status==='pending').length,'Demandes en attente'],
+         [mine.filter(r=>r.status==='accepted'||r.status==='in_progress').length,'En cours'],
+         [convs.length,'Conversations'],
+         [mine.filter(r=>r.status==='completed').length,'Terminées']]
+      : [[items.length,'Pièces en garde-robe'],[favs.length,'Favoris'],
+         [reqs.filter(r=>r.status==='pending').length,'Demandes en cours'],[convs.length,'Conversations']];
+    const news = prods.slice(0,3);
+
+    return `
+    <div class="panel" style="background:linear-gradient(150deg,var(--grenat-dark),var(--grenat));color:var(--ivoire);border-color:var(--line-gold)">
+      <span class="eyebrow">Bienvenue</span>
+      <h2 style="color:var(--ivoire);margin-bottom:6px">Bonjour ${esc((p.full_name||'').split(' ')[0]||'')}</h2>
+      <p class="muted" style="color:rgba(248,244,236,.75);margin:0">
+        ${isPro ? "Voici l'activité de votre profil professionnel." : "Voici un résumé de votre garde-robe et de vos demandes."}</p>
+    </div>
+    <div class="grid grid--4" style="margin-bottom:24px">
+      ${stats.map(([n,l])=>`<div class="stat"><b>${n}</b><span>${esc(l)}</span></div>`).join('')}
+    </div>
+    ${!isPro?`
+    <div class="panel">
+      <div class="panel__head"><h3>Ma garde-robe</h3><a class="btn btn--ghost btn--sm" href="#/compte/garde-robe">Gérer</a></div>
+      ${items.length ? items.slice(0,4).map(i=>`
+        <div class="list-item">
+          <div class="avatar avatar--sm">${esc(initials(i.name))}</div>
+          <div class="list-item__main"><b>${esc(i.name)}</b><small>${esc([i.category,i.color,i.size].filter(Boolean).join(' · '))}</small></div>
+          ${i.product_id?'<span class="tag tag--gold">DZCouture</span>':''}
+        </div>`).join('')
+      : `<div class="empty"><p>Votre garde-robe est vide. Ajoutez vos pièces DZCouture ou vos vêtements personnels.</p>
+         <a class="btn btn--primary btn--sm" href="#/compte/garde-robe">Commencer</a></div>`}
+    </div>
+    <div class="panel">
+      <div class="panel__head"><h3>Demandes en cours</h3><a class="btn btn--ghost btn--sm" href="#/compte/demandes">Tout voir</a></div>
+      ${reqs.length ? reqs.slice(0,3).map(r=>`
+        <div class="list-item"><div class="list-item__main"><b>${esc(r.title||'Demande')}</b>
+          <small>${esc(r.type)} · ${dateFr(r.created_at)}</small></div>
+          <span class="tag ${r.status==='pending'?'tag--pending':'tag--ok'}">${esc(r.status)}</span></div>`).join('')
+      : `<p class="muted">Aucune demande pour le moment. Contactez une couturière ou un styliste depuis leur profil.</p>`}
+    </div>
+    <div class="panel">
+      <div class="panel__head"><h3>Nouveautés &amp; recommandations</h3><a class="btn btn--ghost btn--sm" href="#/vetements">Catalogue</a></div>
+      <div class="grid grid--3">${news.map(productCard).join('')}</div>
+    </div>`
+    :`
+    <div class="panel">
+      <div class="panel__head"><h3>Demandes reçues</h3><a class="btn btn--ghost btn--sm" href="#/compte/demandes">Tout voir</a></div>
+      ${mine.length ? mine.slice(0,5).map(r=>`
+        <div class="list-item"><div class="list-item__main"><b>${esc(r.title||'Demande')}</b>
+        <small>${dateFr(r.created_at)} · ${esc(r.message||'').slice(0,70)}</small></div>
+        <span class="tag ${r.status==='pending'?'tag--pending':'tag--ok'}">${esc(r.status)}</span></div>`).join('')
+      : `<p class="muted">Aucune demande reçue pour l'instant. Complétez votre profil et vos services pour être visible.</p>`}
+    </div>
+    <div class="panel">
+      <div class="panel__head"><h3>Compléter mon profil</h3></div>
+      <div class="grid grid--3">
+        <a class="eco" href="#/compte/profil-pro"><h3 style="font-size:1.05rem">Profil professionnel</h3><p class="muted" style="font-size:.88rem;margin:0">Biographie, spécialités, expérience, contact.</p></a>
+        <a class="eco" href="#/compte/${role==='supplier'?'produits':'services'}"><h3 style="font-size:1.05rem">${role==='supplier'?'Produits':'Services'}</h3><p class="muted" style="font-size:.88rem;margin:0">Ce que vous proposez et vos tarifs indicatifs.</p></a>
+        <a class="eco" href="#/compte/${role==='supplier'?'catalogue':'portfolio'}"><h3 style="font-size:1.05rem">${role==='supplier'?'Catalogue':'Portfolio'}</h3><p class="muted" style="font-size:.88rem;margin:0">Vos réalisations et vos références en images.</p></a>
+      </div>
+    </div>`}`;
+  },
+
+  async 'garde-robe'(){
+    const items = await DB.wardrobeItems();
+    const cats = ['Robe','Haut','Bas','Veste','Chaussures','Sac','Accessoire'];
+    return `
+    <div class="panel">
+      <div class="panel__head"><div><span class="eyebrow">Garde-robe numérique</span><h3 style="margin:0">Ma garde-robe</h3></div>
+        <button class="btn btn--primary btn--sm" id="addItemBtn">Ajouter une pièce</button></div>
+      <p class="muted" style="font-size:.92rem">Rassemblez ici vos pièces DZCouture et vos vêtements personnels : photo, catégorie, couleur, taille, marque, saison et occasion.</p>
+      <form id="wardrobeForm" class="hidden" style="border:1px solid var(--line-gold);border-radius:14px;padding:20px;margin:18px 0;background:var(--surface-2)">
+        <div class="form-row form-row--2">
+          <div class="field"><label>Nom de la pièce</label><input class="input" name="name" required></div>
+          <div class="field"><label>Catégorie</label><select class="input" name="category">${cats.map(c=>`<option>${c}</option>`).join('')}</select></div>
+        </div>
+        <div class="form-row form-row--2">
+          <div class="field"><label>Couleur</label><input class="input" name="color"></div>
+          <div class="field"><label>Taille</label><input class="input" name="size"></div>
+        </div>
+        <div class="form-row form-row--2">
+          <div class="field"><label>Marque</label><input class="input" name="brand"></div>
+          <div class="field"><label>Saison</label><select class="input" name="season">
+            <option>Toutes saisons</option><option>Printemps</option><option>Été</option><option>Automne</option><option>Hiver</option></select></div>
+        </div>
+        <div class="form-row form-row--2">
+          <div class="field"><label>Occasion</label><select class="input" name="occasion">
+            <option>Quotidien</option><option>Travail</option><option>Soirée</option><option>Fête</option><option>Cérémonie</option></select></div>
+          <div class="field"><label>Photo (URL ou téléversement)</label><input class="input" type="file" name="photo" accept="image/*"></div>
+        </div>
+        <div class="form-row"><div class="field"><label>Description</label><input class="input" name="description"></div></div>
+        <button class="btn btn--primary btn--sm" type="submit">Enregistrer la pièce</button>
+      </form>
+      <div class="chips" style="margin:18px 0">
+        <span class="chip on" data-wcat="">Tout (${items.length})</span>
+        ${cats.map(c=>`<span class="chip" data-wcat="${c}">${c}</span>`).join('')}
+      </div>
+      <div class="grid grid--4" id="wardrobeGrid">
+        ${items.length ? items.map(i=>`
+          <article class="card" data-wc="${esc(i.category||'')}">
+            <div class="card__media" style="aspect-ratio:1/1">
+              ${i.photo_url?`<img src="${esc(i.photo_url)}" alt="${esc(i.name)}">`:silhouette({belt:true})}</div>
+            <div class="card__body">
+              <div class="card__meta">${esc(i.category||'')}</div>
+              <h3 class="card__title" style="font-size:1.08rem">${esc(i.name)}</h3>
+              <p class="muted" style="font-size:.82rem;margin:0">${esc([i.color,i.size,i.brand].filter(Boolean).join(' · '))}</p>
+              <div class="card__foot">
+                <span class="tag">${esc(i.occasion||'—')}</span>
+                <button class="btn btn--ghost btn--sm" data-del-item="${esc(i.id)}">Retirer</button>
+              </div>
+            </div></article>`).join('')
+        : `<div class="empty" style="grid-column:1/-1">
+             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">${ICONS.hanger}</svg>
+             <h3>Votre garde-robe est vide</h3>
+             <p class="muted">Ajoutez une première pièce, ou parcourez le catalogue.</p></div>`}
+      </div>
+    </div>`;
+  },
+
+  async capsule(){
+    const cap = await DB.capsule();
+    const items = (cap && cap.items) || [];
+    const target = (cap && cap.target) || {};
+    const wardrobe = await DB.wardrobeItems();
+    const looks = buildLooks(items.length?items:wardrobe);
+    return `
+    <div class="panel">
+      <div class="panel__head"><div><span class="eyebrow">Minimalisme</span><h3 style="margin:0">Ma garde-robe capsule</h3></div>
+        <button class="btn btn--primary btn--sm" id="addCapsuleBtn">Ajouter un élément</button></div>
+      <p class="muted" style="font-size:.92rem">Une sélection restreinte de pièces qui se combinent entre elles. Objectif indicatif :
+        ${Object.keys(target).map(k=>`${target[k]} ${k}`).join(', ')||'à définir'}.</p>
+      <form id="capsuleForm" class="hidden" style="border:1px solid var(--line-gold);border-radius:14px;padding:20px;margin:18px 0;background:var(--surface-2)">
+        <div class="form-row form-row--2">
+          <div class="field"><label>Élément</label><input class="input" name="label" required placeholder="Chemise ivoire"></div>
+          <div class="field"><label>Catégorie</label><select class="input" name="category">
+            <option>hauts</option><option>pantalons</option><option>vestes</option><option>robes</option><option>accessoires</option></select></div>
+        </div>
+        <button class="btn btn--primary btn--sm" type="submit">Ajouter à la capsule</button>
+      </form>
+      <div class="grid grid--4" style="margin-top:18px">
+        ${items.length ? items.map(i=>`<div class="card"><div class="card__body">
+            <div class="card__meta">${esc(i.category||'')}</div>
+            <h3 class="card__title" style="font-size:1.05rem">${esc(i.label||'Élément')}</h3>
+            <button class="btn btn--ghost btn--sm" data-del-capsule="${esc(i.id)}" style="margin-top:10px">Retirer</button>
+          </div></div>`).join('')
+        : `<div class="empty" style="grid-column:1/-1"><p class="muted">Composez votre capsule : quelques hauts, quelques bas, une veste, des accessoires.</p></div>`}
+      </div>
+    </div>
+    <div class="panel">
+      <h3>Looks suggérés</h3>
+      <p class="muted" style="font-size:.9rem">Combinaisons générées à partir des éléments de votre capsule et de votre garde-robe.</p>
+      ${looks.length ? `<div class="grid grid--3">${looks.map((l,i)=>`
+        <div class="eco"><span class="eyebrow">Look ${i+1}</span>
+          <p style="margin:0">${l.map(x=>esc(x)).join(' + ')}</p></div>`).join('')}</div>`
+      : `<p class="muted">Ajoutez au moins deux éléments pour voir des propositions de looks.</p>`}
+    </div>`;
+  },
+
+  async favoris(){
+    const [ids, prods] = await Promise.all([DB.favorites(), DB.products()]);
+    const list = prods.filter(p=>ids.includes(p.id));
+    return `<div class="panel">
+      <div class="panel__head"><div><span class="eyebrow">Coups de cœur</span><h3 style="margin:0">Mes favoris</h3></div>
+        <a class="btn btn--ghost btn--sm" href="#/vetements">Catalogue</a></div>
+      <div class="grid grid--3">${list.length ? list.map(productCard).join('')
+        : `<div class="empty" style="grid-column:1/-1">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">${ICONS.heart}</svg>
+            <h3>Aucun favori</h3><p class="muted">Touchez le cœur sur une pièce pour la retrouver ici.</p></div>`}</div>
+    </div>`;
+  },
+
+  async demandes(){
+    const reqs = await DB.requests();
+    const isPro = (S.profile||{}).role !== 'client';
+    return `<div class="panel">
+      <div class="panel__head"><div><span class="eyebrow">Suivi</span><h3 style="margin:0">${isPro?'Demandes reçues':'Mes demandes'}</h3></div></div>
+      ${reqs.length ? reqs.map(r=>`
+        <div class="list-item">
+          <div class="list-item__main">
+            <b>${esc(r.title||'Demande')}</b>
+            <small>${esc(r.type||'')} · ${dateFr(r.created_at)}${r.budget?' · budget '+money(r.budget):''}</small>
+            <p class="muted" style="font-size:.88rem;margin:6px 0 0">${esc(r.message||'')}</p>
+          </div>
+          <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
+            <span class="tag ${r.status==='pending'?'tag--pending':r.status==='refused'?'':'tag--ok'}">${esc(r.status)}</span>
+            ${isPro && r.status==='pending' ? `
+              <button class="btn btn--primary btn--sm" data-req-accept="${esc(r.id)}">Accepter</button>
+              <button class="btn btn--ghost btn--sm" data-req-refuse="${esc(r.id)}">Refuser</button>`:''}
+          </div>
+        </div>`).join('')
+      : `<div class="empty"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">${ICONS.file}</svg>
+          <h3>Aucune demande</h3><p class="muted">${isPro?'Les demandes de vos clientes apparaîtront ici.':'Contactez une couturière ou un styliste pour lancer une demande.'}</p></div>`}
+    </div>`;
+  },
+
+  async messages(){
+    const convs = await DB.conversations();
+    return `<div class="panel">
+      <div class="panel__head"><div><span class="eyebrow">Messagerie</span><h3 style="margin:0">Mes conversations</h3></div></div>
+      ${convs.length ? `<div class="chat">
+        <div class="chat__list" id="convList">
+          ${convs.map((c,i)=>{
+            const other = (S.user && c.client_id===S.user.id ? c.provider : c.client) || {};
+            return `<div class="chat__conv ${i===0?'on':''}" data-conv="${esc(c.id)}">
+              <b style="display:block">${esc(other.full_name||c.subject||'Conversation')}</b>
+              <small class="muted">${esc(c.subject||'')} · ${dateFr(c.last_message_at)}</small></div>`;
+          }).join('')}
+        </div>
+        <div class="chat__main">
+          <div class="chat__msgs" id="chatMsgs"><p class="muted" style="margin:auto">Sélectionnez une conversation.</p></div>
+          <form class="chat__form" id="chatForm">
+            <input class="input" name="body" placeholder="Écrire un message…" required>
+            <button class="btn btn--primary btn--sm" type="submit">Envoyer</button>
+          </form>
+        </div></div>`
+      : `<div class="empty"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">${ICONS.chat}</svg>
+          <h3>Aucune conversation</h3><p class="muted">Écrivez à une couturière, un styliste ou à DZCouture depuis leur profil.</p></div>`}
+    </div>`;
+  },
+
+  async notifications(){
+    const list = await DB.notifications();
+    return `<div class="panel">
+      <div class="panel__head"><div><span class="eyebrow">Alertes</span><h3 style="margin:0">Mes notifications</h3></div></div>
+      ${list.length ? list.map(n=>`<div class="list-item">
+        <div class="list-item__main"><b>${esc(n.title)}</b><small>${esc(n.body||'')} · ${dateFr(n.created_at)}</small></div>
+        ${n.is_read?'':'<span class="tag tag--gold">Nouveau</span>'}</div>`).join('')
+      : `<div class="empty"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">${ICONS.bell}</svg>
+          <h3>Rien de neuf</h3><p class="muted">Messages, réponses et nouvelles demandes s'afficheront ici.</p></div>`}
+    </div>`;
+  },
+
+  async profil(){
+    const p = S.profile || {};
+    return `<div class="panel">
+      <div class="panel__head"><div><span class="eyebrow">Compte</span><h3 style="margin:0">Mon profil</h3></div></div>
+      <form id="profileForm">
+        <div class="form-row form-row--2">
+          <div class="field"><label>Nom complet</label><input class="input" name="full_name" value="${esc(p.full_name||'')}"></div>
+          <div class="field"><label>Nom affiché</label><input class="input" name="display_name" value="${esc(p.display_name||'')}"></div>
+        </div>
+        <div class="form-row form-row--2">
+          <div class="field"><label>Téléphone</label><input class="input" name="phone" value="${esc(p.phone||'')}"></div>
+          <div class="field"><label>Ville</label><input class="input" name="city" value="${esc(p.city||'')}"></div>
+        </div>
+        <div class="form-row"><div class="field"><label>À propos</label><textarea class="input" name="bio">${esc(p.bio||'')}</textarea></div></div>
+        <div class="form-row"><div class="field"><label>Photo de profil</label><input class="input" type="file" name="avatar" accept="image/*"></div></div>
+        <div class="form-row form-row--2">
+          <div class="field"><label>Email (non modifiable ici)</label><input class="input" value="${esc(p.email||'')}" disabled></div>
+          <div class="field"><label>Rôle</label><input class="input" value="${esc(ROLE_LABEL[p.role]||'')}" disabled></div>
+        </div>
+        <button class="btn btn--primary" type="submit">Enregistrer</button>
+      </form>
+    </div>
+    <div class="panel">
+      <h3>Sécurité</h3>
+      <form id="passwordForm">
+        <div class="form-row form-row--2">
+          <div class="field"><label>Nouveau mot de passe</label><input class="input" type="password" name="password" minlength="8" required></div>
+          <div class="field" style="justify-content:flex-end"><button class="btn btn--ghost" type="submit">Changer le mot de passe</button></div>
+        </div>
+      </form>
+      <p class="muted" style="font-size:.84rem">Les mots de passe sont gérés par Supabase Auth : ils ne sont jamais stockés par DZCouture.</p>
+    </div>`;
+  },
+
+  async 'profil-pro'(role){
+    const table = role==='seamstress'?'seamstresses':role==='stylist'?'stylists':'suppliers';
+    const d = await DB.proDetails(table);
+    const isSupplier = role==='supplier';
+    return `<div class="panel">
+      <div class="panel__head"><div><span class="eyebrow">Profil public</span><h3 style="margin:0">${isSupplier?'Mon entreprise':'Mon profil professionnel'}</h3></div>
+        <span class="tag ${(S.profile.status==='approved')?'tag--ok':'tag--pending'}">${esc(S.profile.status||'')}</span></div>
+      <form id="proForm" data-table="${table}">
+        ${isSupplier?`<div class="form-row form-row--2">
+          <div class="field"><label>Nom de l'entreprise</label><input class="input" name="company_name" value="${esc(d.company_name||'')}" required></div>
+          <div class="field"><label>Site web</label><input class="input" name="website" value="${esc(d.website||'')}"></div>
+        </div>`:`<div class="form-row"><div class="field"><label>Accroche</label>
+          <input class="input" name="headline" value="${esc(d.headline||'')}" placeholder="Couture sur mesure et transformation de pièces"></div></div>`}
+        <div class="form-row"><div class="field"><label>${isSupplier?'Description':'Biographie'}</label>
+          <textarea class="input" name="${isSupplier?'description':'biography'}">${esc(d.biography||d.description||'')}</textarea></div></div>
+        <div class="form-row form-row--2">
+          <div class="field"><label>Ville</label><input class="input" name="city" value="${esc(d.city||'Béjaïa')}"></div>
+          <div class="field"><label>Spécialités (séparées par des virgules)</label>
+            <input class="input" name="specialties" value="${esc((d.specialties||[]).join(', '))}"></div>
+        </div>
+        ${isSupplier?`<div class="form-row form-row--2">
+          <div class="field"><label>Types de tissus</label><input class="input" name="fabric_types" value="${esc((d.fabric_types||[]).join(', '))}"></div>
+          <div class="field"><label>Matières / accessoires</label><input class="input" name="materials" value="${esc((d.materials||[]).join(', '))}"></div>
+        </div>`:`<div class="form-row form-row--2">
+          <div class="field"><label>Années d'expérience</label><input class="input" type="number" name="experience_years" value="${esc(d.experience_years||0)}"></div>
+          <div class="field"><label>Types de services</label><input class="input" name="services_types" value="${esc((d.services_types||[]).join(', '))}"
+            placeholder="sur mesure, haute couture, retouches, personnalisation"></div>
+        </div>
+        <div class="form-row form-row--2">
+          <div class="field"><label>Tarif indicatif — à partir de</label><input class="input" type="number" name="price_from" value="${esc(d.price_from||'')}"></div>
+          <div class="field"><label>Tarif indicatif — jusqu'à</label><input class="input" type="number" name="price_to" value="${esc(d.price_to||'')}"></div>
+        </div>`}
+        <div class="form-row form-row--2">
+          <div class="field"><label>Téléphone professionnel</label><input class="input" name="contact_phone" value="${esc(d.contact_phone||'')}"></div>
+          <div class="field"><label>Email professionnel</label><input class="input" name="contact_email" value="${esc(d.contact_email||'')}"></div>
+        </div>
+        <button class="btn btn--primary" type="submit">Enregistrer mon profil</button>
+      </form>
+      <p class="muted" style="font-size:.84rem;margin-top:14px">Les modifications sont visibles publiquement une fois votre profil approuvé par l'administration.</p>
+    </div>`;
+  },
+
+  async services(role){
+    return `<div class="panel">
+      <div class="panel__head"><div><span class="eyebrow">Offre</span><h3 style="margin:0">Mes services</h3></div>
+        <button class="btn btn--primary btn--sm" id="addServiceBtn">Ajouter un service</button></div>
+      <form id="serviceForm" class="hidden" style="border:1px solid var(--line-gold);border-radius:14px;padding:20px;margin-bottom:18px;background:var(--surface-2)">
+        <div class="form-row form-row--2">
+          <div class="field"><label>Intitulé</label><input class="input" name="title" required
+            placeholder="${role==='stylist'?'Conseil vestimentaire personnalisé':'Robe sur mesure'}"></div>
+          <div class="field"><label>Catégorie</label><select class="input" name="category">
+            ${(role==='stylist'
+              ? ['Conseil vestimentaire','Conseil couleurs','Création de looks','Accompagnement personnalisé','Organisation de garde-robe','Garde-robe capsule','Accompagnement VIP']
+              : ['Couture sur mesure','Haute couture','Retouches','Personnalisation','Création de vêtements','Transformation de vêtements']
+            ).map(c=>`<option>${c}</option>`).join('')}</select></div>
+        </div>
+        <div class="form-row"><div class="field"><label>Description</label><textarea class="input" name="description"></textarea></div></div>
+        <div class="form-row form-row--2">
+          <div class="field"><label>Tarif à partir de</label><input class="input" type="number" name="price_from"></div>
+          <div class="field"><label>Délai indicatif</label><input class="input" name="duration" placeholder="7 à 10 jours"></div>
+        </div>
+        <button class="btn btn--primary btn--sm" type="submit">Enregistrer</button>
+      </form>
+      <div id="servicesList"></div>
+    </div>`;
+  },
+
+  async portfolio(){
+    return `<div class="panel">
+      <div class="panel__head"><div><span class="eyebrow">Réalisations</span><h3 style="margin:0">Mon portfolio</h3></div></div>
+      <p class="muted" style="font-size:.92rem">Ajoutez les photos de vos créations. Elles sont stockées dans Supabase Storage (bucket <code>portfolios</code>) et affichées sur votre profil public.</p>
+      <form id="portfolioForm">
+        <div class="form-row form-row--2">
+          <div class="field"><label>Titre de la réalisation</label><input class="input" name="title" required></div>
+          <div class="field"><label>Photo</label><input class="input" type="file" name="image" accept="image/*"></div>
+        </div>
+        <button class="btn btn--primary btn--sm" type="submit">Ajouter au portfolio</button>
+      </form>
+      <div class="grid grid--4" id="portfolioGrid" style="margin-top:22px"></div>
+    </div>`;
+  },
+
+  async produits(){
+    const mine = await DB.myProducts();
+    return `<div class="panel">
+      <div class="panel__head"><div><span class="eyebrow">Catalogue</span><h3 style="margin:0">Mes produits</h3></div>
+        <button class="btn btn--primary btn--sm" id="addProductBtn">Ajouter un produit</button></div>
+      <form id="productForm" class="hidden" style="border:1px solid var(--line-gold);border-radius:14px;padding:20px;margin-bottom:18px;background:var(--surface-2)">
+        <div class="form-row form-row--2">
+          <div class="field"><label>Nom</label><input class="input" name="name" required></div>
+          <div class="field"><label>Prix (DZD)</label><input class="input" type="number" name="price" required></div>
+        </div>
+        <div class="form-row"><div class="field"><label>Description</label><textarea class="input" name="description"></textarea></div></div>
+        <div class="form-row form-row--2">
+          <div class="field"><label>Matière</label><input class="input" name="material"></div>
+          <div class="field"><label>Couleurs (virgules)</label><input class="input" name="colors"></div>
+        </div>
+        <button class="btn btn--primary btn--sm" type="submit">Enregistrer</button>
+      </form>
+      ${mine.length ? mine.map(p=>`<div class="list-item">
+        <div class="list-item__main"><b>${esc(p.name)}</b><small>${money(p.price)} · ${esc(p.status)}</small></div>
+        <span class="tag ${p.status==='approved'?'tag--ok':'tag--pending'}">${esc(p.status)}</span></div>`).join('')
+      : `<div class="empty"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">${ICONS.box}</svg>
+         <h3>Aucun produit</h3><p class="muted">Ajoutez vos tissus, matières ou accessoires.</p></div>`}
+    </div>`;
+  },
+
+  async catalogue(){
+    return `<div class="panel">
+      <div class="panel__head"><div><span class="eyebrow">Document</span><h3 style="margin:0">Mon catalogue</h3></div></div>
+      <p class="muted">Téléversez votre catalogue (PDF ou images) : il sera accessible depuis votre profil public.</p>
+      <form id="catalogForm">
+        <div class="form-row"><div class="field"><label>Fichier catalogue</label><input class="input" type="file" name="catalog" accept=".pdf,image/*"></div></div>
+        <button class="btn btn--primary btn--sm" type="submit">Envoyer</button>
+      </form>
+    </div>`;
+  },
+
+  async disponibilites(role){
+    const table = role==='stylist'?'stylists':'seamstresses';
+    const d = await DB.proDetails(table);
+    return `<div class="panel">
+      <div class="panel__head"><div><span class="eyebrow">Agenda</span><h3 style="margin:0">Mes disponibilités</h3></div></div>
+      <form id="availForm" data-table="${table}">
+        <div class="form-row"><div class="field"><label>Statut actuel</label>
+          <select class="input" name="availability">
+            <option value="available" ${d.availability==='available'?'selected':''}>Disponible — j'accepte de nouvelles demandes</option>
+            <option value="busy" ${d.availability==='busy'?'selected':''}>Occupée — délais rallongés</option>
+            <option value="unavailable" ${d.availability==='unavailable'?'selected':''}>Indisponible — pas de nouvelle demande</option>
+          </select></div></div>
+        <button class="btn btn--primary btn--sm" type="submit">Mettre à jour</button>
+      </form>
+    </div>`;
+  }
+};
+
+/* Génère quelques combinaisons de looks à partir d'une liste d'éléments */
+function buildLooks(items){
+  const norm = items.map(i => i.label || i.name).filter(Boolean);
+  const tops = norm.filter((_,i)=>i%3===0), bottoms = norm.filter((_,i)=>i%3===1), extras = norm.filter((_,i)=>i%3===2);
+  const looks = [];
+  tops.forEach(t => bottoms.forEach(b => {
+    if(looks.length < 6) looks.push(extras.length ? [t,b,extras[looks.length % extras.length]] : [t,b]);
+  }));
+  return looks;
+}
+
+/* ==========================================================================
+   11. TÉLÉVERSEMENT (Supabase Storage)
+   ========================================================================== */
+async function upload(bucket, file){
+  if(!file) return null;
+  if(!/^image\/|application\/pdf/.test(file.type)) { toast('Format de fichier non autorisé.','err'); return null; }
+  if(file.size > 5*1024*1024) { toast('Fichier trop lourd (5 Mo maximum).','err'); return null; }
+  if(!ONLINE){ return await new Promise(r=>{ const fr=new FileReader(); fr.onload=()=>r(fr.result); fr.readAsDataURL(file); }); }
+  const path = `${S.user.id}/${Date.now()}-${slugify(file.name.replace(/\.[^.]+$/,''))}.${(file.name.split('.').pop()||'jpg')}`;
+  const { error } = await sb.storage.from(bucket).upload(path, file, { upsert:false, contentType:file.type });
+  if(error){ toast(error.message,'err'); return null; }
+  const { data } = sb.storage.from(bucket).getPublicUrl(path);
+  return data.publicUrl;
+}
+
+/* ==========================================================================
+   12. ROUTEUR
+   ========================================================================== */
+const ROUTES = {
+  '/':              Views.home,
+  '/collections':   Views.collections,
+  '/innovation':    Views.innovation,
+  '/vetements':     Views.vetements,
+  '/produit':       Views.produit,
+  '/couturieres':   Views.pros('seamstresses'),
+  '/stylistes':     Views.pros('stylists'),
+  '/fournisseurs':  Views.pros('suppliers'),
+  '/ateliers':      Views.ateliers,
+  '/vip':           Views.vip,
+  '/videos':        Views.videos,
+  '/contact':       Views.contact,
+  '/compte':        Views.compte
+};
+
+function parseHash(){
+  const raw = (location.hash || '#/').replace(/^#/,'');
+  const [pathPart, queryPart] = raw.split('?');
+  const segs = pathPart.split('/').filter(Boolean);
+  const params = {};
+  new URLSearchParams(queryPart || '').forEach((v,k)=>params[k]=v);
+  let route = '/' + (segs[0] || '');
+  if(route === '/produit') params.slug = segs[1];
+  if(route === '/compte')  params.sub  = segs[1] || '';
+  return { route, params };
+}
+
+async function render(){
+  const { route, params } = parseHash();
+  S.route = route; S.params = params;
+  const view = ROUTES[route] || Views.home;
+  if(heroTimer){ clearInterval(heroTimer); heroTimer = null; }
+  if(compteAuthTimer){ clearTimeout(compteAuthTimer); compteAuthTimer = null; }
+  const main = $('#main');
+  main.innerHTML = `<div class="wrap" style="padding:80px 0"><div class="skeleton" style="height:32px;max-width:320px;margin-bottom:18px"></div>
+    <div class="grid grid--4">${'<div class="skeleton" style="height:320px"></div>'.repeat(4)}</div></div>`;
+  try {
+    main.innerHTML = await view(params);
+  } catch(e){
+    console.error(e);
+    main.innerHTML = `<div class="wrap" style="padding:80px 0"><h2>Une erreur est survenue</h2>
+      <p class="muted">${esc(e.message||'')}</p><a class="btn btn--primary" href="#/">Retour à l'accueil</a></div>`;
+  }
+  window.scrollTo({top:0,behavior:'instant'});
+  $$('.nav a').forEach(a=>a.classList.toggle('active', a.getAttribute('href') === '#'+ (route==='/'?'/':route)));
+  $('#nav').classList.remove('open');
+  bindView(route, params);
+  observeReveal();
+}
+
+window.addEventListener('hashchange', render);
+
+let heroTimer = null;      // animation de la silhouette (accueil) — stoppée au changement de vue
+let compteAuthTimer = null; // invite de connexion sur /compte — annulée si on change de vue avant
+
+/* ==========================================================================
+   13. INTERACTIONS PAR VUE
+   ========================================================================== */
+function bindView(route, params){
+
+  /* --- Ouverture de la modale d'inscription depuis n'importe quel bouton --- */
+  $$('[data-open-signup]').forEach(b => b.onclick = () => {
+    Auth.open('signup');
+    const role = b.dataset.signupRole;
+    if(role){ Auth.selectedRole = role; $$('#roleGrid .role').forEach(r=>r.classList.toggle('on', r.dataset.role===role));
+              $('#companyRow').style.display = role==='supplier' ? '' : 'none'; }
+  });
+
+  /* --- Favoris (cartes et fiche produit) --- */
+  $$('[data-fav]').forEach(b => b.onclick = async e => {
+    e.preventDefault(); e.stopPropagation();
+    const on = await DB.toggleFavorite(b.dataset.fav);
+    if(on===null) return;
+    $$(`[data-fav="${b.dataset.fav}"]`).forEach(x=>x.classList.toggle('on', on));
+    toast(on ? 'Ajouté à vos favoris.' : 'Retiré de vos favoris.');
+  });
+
+  /* ---------------- Accueil : silhouette animée ---------------- */
+  if(route === '/'){
+    const looks = [
+      {n:'Look 1 — Sortie',o:'Quotidien',k:{}},
+      {n:'Look 2 — Élégant',o:'Élégant',k:{sleeves:true,belt:true}},
+      {n:'Look 3 — Fête',o:'Fête',k:{sleeves:true,belt:true,collar:true}},
+      {n:'Look 4 — Soirée',o:'Soirée',k:{cape:true,skirt:true,belt:true}}
+    ];
+    const dots = $('#heroDots'); if(!dots) return;
+    dots.innerHTML = looks.map((_,i)=>`<i class="${i===0?'on':''}" data-i="${i}"></i>`).join('');
+    let idx = 0;
+    const show = i => {
+      idx = i;
+      const box = $('#heroModular');
+      if(!box){ clearInterval(heroTimer); heroTimer = null; return; }
+      box.querySelectorAll('.piece').forEach(g=>g.classList.add('off'));
+      const map = {sleeves:0,cape:1,belt:2,skirt:3,collar:4};
+      Object.keys(looks[i].k).forEach(k=>{
+        const g = box.querySelectorAll('.piece')[map[k]];
+        if(g) g.classList.remove('off');
+      });
+      $('#heroLookName').textContent = looks[i].n;
+      $('#heroLookOcc').textContent  = looks[i].o;
+      $$('#heroDots i').forEach((d,j)=>d.classList.toggle('on', j===i));
+    };
+    show(0);
+    const cycle = () => { heroTimer = setInterval(()=>show((idx+1)%looks.length), 3600); };
+    cycle();
+    $$('#heroDots i').forEach(d => d.onclick = ()=>{ clearInterval(heroTimer); show(+d.dataset.i); cycle(); });
+  }
+
+  /* ---------------- Catalogue : filtres ---------------- */
+  if(route === '/vetements'){
+    const apply = async () => {
+      const all = await DB.products();
+      const q = ($('#fSearch').value||'').toLowerCase().trim();
+      const cat = $('#fCat').value, col = $('#fCol').value, type = $('#fType').value, sort = $('#fSort').value;
+      let list = all.filter(p => {
+        if(cat && p.category_id !== cat) return false;
+        if(col && p.collection_id !== col) return false;
+        if(type === 'modular' && !p.is_modular) return false;
+        if(type === 'couture' && !p.is_couture) return false;
+        if(q && !((p.name+' '+(p.description||'')+' '+(p.material||'')).toLowerCase().includes(q))) return false;
+        return true;
+      });
+      if(sort === 'asc')  list = list.slice().sort((a,b)=>a.price-b.price);
+      if(sort === 'desc') list = list.slice().sort((a,b)=>b.price-a.price);
+      $('#countLine').textContent = `${list.length} pièce${list.length>1?'s':''} — données de démonstration incluses.`;
+      $('#productGrid').innerHTML = list.length ? list.map(productCard).join('')
+        : `<div class="empty" style="grid-column:1/-1"><h3>Aucune pièce ne correspond</h3><p class="muted">Modifiez vos filtres.</p></div>`;
+      bindView('__cards__', {});
+      observeReveal();
+    };
+    ['fSearch','fCat','fCol','fType','fSort'].forEach(id => {
+      const el = $('#'+id); if(!el) return;
+      el.addEventListener(id==='fSearch'?'input':'change', apply);
+    });
+    if(params.collection){
+      DB.collections().then(cols => {
+        const c = cols.find(x=>x.slug===params.collection);
+        if(c) $('#fCol').value = c.id;
+        apply();
+      });
+    } else apply();
+  }
+
+  /* ---------------- Fiche produit ---------------- */
+  if(route === '/produit'){
+    DB.product(params.slug).then(p => {
+      if(!p) return;
+      let active = {};   // clés de silhouette
+      let chosen = [];   // ids de modules
+      const total = () => p.price + chosen.reduce((s,id)=>{
+        const m = (p.modules||[]).find(x=>x.id===id); return s + (m ? Number(m.price_delta||0) : 0); }, 0);
+      const paint = () => {
+        const media = $('#pMedia'); if(!media) return;
+        media.innerHTML = silhouette(active);
+        $('#pTotal').textContent = money(total(), p.currency);
+        $$('[data-mod]').forEach(el => el.classList.toggle('on', chosen.includes(el.dataset.mod)));
+      };
+      $$('[data-conf]').forEach(el => el.onclick = () => {
+        $$('[data-conf]').forEach(x=>x.classList.remove('on'));
+        el.classList.add('on');
+        const conf = (p.configurations||[]).find(c=>c.id===el.dataset.conf);
+        chosen = conf ? (conf.module_ids||[]).slice() : [];
+        active = {};
+        chosen.forEach(id => { const m = (p.modules||[]).find(x=>x.id===id); if(m) active[moduleKey(m.name)] = true; });
+        paint();
+      });
+      $$('[data-mod]').forEach(el => el.onclick = () => {
+        const id = el.dataset.mod;
+        chosen = chosen.includes(id) ? chosen.filter(x=>x!==id) : chosen.concat(id);
+        active = {};
+        chosen.forEach(x => { const m = (p.modules||[]).find(y=>y.id===x); if(m) active[moduleKey(m.name)] = true; });
+        $$('[data-conf]').forEach(x=>x.classList.remove('on'));
+        paint();
+      });
+      const first = (p.configurations||[])[0];
+      if(first){ chosen = (first.module_ids||[]).slice();
+                 chosen.forEach(id=>{ const m=(p.modules||[]).find(x=>x.id===id); if(m) active[moduleKey(m.name)]=true; }); }
+      paint();
+    });
+
+    $$('[data-request-product]').forEach(b => b.onclick = () => {
+      if(!S.user) return Auth.open('login','Connectez-vous pour envoyer une demande.');
+      requestModal({ title:'Demande : '+b.dataset.name, type:'custom', product_id:b.dataset.requestProduct });
+    });
+    $$('[data-add-wardrobe]').forEach(b => b.onclick = async () => {
+      if(!S.user) return Auth.open('login','Connectez-vous pour utiliser votre garde-robe.');
+      try{
+        await DB.addWardrobeItem({ name:b.dataset.name, category:'Robe', product_id:ONLINE?b.dataset.addWardrobe:null, occasion:'Quotidien' });
+        toast('Pièce ajoutée à votre garde-robe.');
+      }catch(e){ toast(e.message,'err'); }
+    });
+  }
+
+  /* ---------------- Annuaires professionnels ---------------- */
+  if(['/couturieres','/stylistes','/fournisseurs'].includes(route)){
+    const grid = $('#proGrid'); if(grid){
+      const kind = grid.dataset.kind;
+      const filter = async () => {
+        const rows = await DB.pros(kind);
+        const q = ($('#proSearch')?$('#proSearch').value:'').toLowerCase();
+        const city = $('#proCity')?$('#proCity').value:'';
+        const spec = $('#proSpec')?$('#proSpec').value:'';
+        const av   = $('#proAvail')?$('#proAvail').value:'';
+        const list = rows.filter(r=>{
+          const name = (r.company_name||(r.profile&&r.profile.full_name)||'').toLowerCase();
+          if(q && !(name+' '+(r.specialties||[]).join(' ').toLowerCase()).includes(q)) return false;
+          if(city && r.city !== city) return false;
+          if(spec && !(r.specialties||[]).includes(spec)) return false;
+          if(av && r.availability !== av) return false;
+          return true;
+        });
+        grid.innerHTML = list.length ? list.map(r=>proCard(r,kind)).join('') : emptyPros(kind);
+        bindProActions(kind);
+        observeReveal();
+      };
+      ['proSearch','proCity','proSpec','proAvail'].forEach(id=>{
+        const el = $('#'+id); if(el) el.addEventListener(id==='proSearch'?'input':'change', filter);
+      });
+      bindProActions(kind);
+    }
+  }
+
+  /* ---------------- Vidéos : filtre par catégorie ---------------- */
+  if(route === '/videos'){
+    $$('[data-vcat]').forEach(c => c.onclick = () => {
+      $$('[data-vcat]').forEach(x=>x.classList.remove('on')); c.classList.add('on');
+      const v = c.dataset.vcat;
+      $$('#videoGrid .card').forEach(card => card.style.display = (!v || card.dataset.cat===v) ? '' : 'none');
+    });
+  }
+
+  /* ---------------- Contact ---------------- */
+  const cf = $('#contactForm');
+  if(cf) cf.onsubmit = async e => {
+    e.preventDefault();
+    const fd = new FormData(cf);
+    try{
+      await DB.contact({ name:fd.get('name'), email:fd.get('email'), phone:fd.get('phone'),
+                         subject:fd.get('subject'), message:fd.get('message') });
+      cf.reset(); toast('Message envoyé. Nous vous répondrons rapidement.');
+    }catch(err){ toast(err.message,'err'); }
+  };
+
+  /* ---------------- Espace personnel ---------------- */
+  if(route === '/compte') bindDashboard(params.sub || '');
+}
+
+function bindProActions(kind){
+  $$('[data-pro-request]').forEach(b => b.onclick = () => {
+    if(!S.user) return Auth.open('login','Connectez-vous pour contacter un professionnel.');
+    requestModal({ title:'Demande à '+b.dataset.name, provider_id:b.dataset.proRequest,
+                   type: kind==='stylists' ? 'advice' : kind==='suppliers' ? 'supply' : 'custom' });
+  });
+  $$('[data-pro-view]').forEach(b => b.onclick = async () => {
+    const rows = await DB.pros(b.dataset.kind);
+    const r = rows.find(x=>x.id===b.dataset.proView); if(!r) return;
+    const prof = r.profile || {};
+    const name = r.company_name || prof.full_name || 'Professionnel';
+    $('#genericBody').innerHTML = `
+      <div style="display:flex;gap:20px;align-items:center;margin-bottom:20px">
+        ${prof.avatar_url?`<img class="avatar avatar--lg" src="${esc(prof.avatar_url)}" alt="">`:`<div class="avatar avatar--lg">${esc(initials(name))}</div>`}
+        <div><span class="eyebrow">${esc(r.city||'Béjaïa')}</span><h2 style="margin:0">${esc(name)}</h2>
+        <p class="muted" style="margin:4px 0 0">${esc(r.headline||'')}</p></div>
+      </div>
+      <p>${esc(r.biography||r.description||'')}</p>
+      <div class="chips" style="margin:16px 0">${(r.specialties||[]).map(s=>`<span class="tag">${esc(s)}</span>`).join('')}</div>
+      ${(r.portfolio||[]).length?`<h3>Portfolio</h3><div class="grid grid--4">${(r.portfolio||[]).map(x=>
+        `<div class="card"><div class="card__media">${x.url?`<img src="${esc(x.url)}" alt="">`:silhouette({})}</div></div>`).join('')}</div>`:''}
+      <div class="specs">
+        <div>Disponibilité</div><div>${esc(r.availability||'—')}</div>
+        <div>Expérience</div><div>${r.experience_years?esc(r.experience_years)+' ans':'—'}</div>
+        <div>Tarifs indicatifs</div><div>${r.price_from?money(r.price_from)+(r.price_to?' — '+money(r.price_to):''):'Sur devis'}</div>
+      </div>
+      <button class="btn btn--primary" style="margin-top:20px" data-pro-request="${esc(r.profile_id||'')}"
+              data-name="${esc(name)}" data-kind="${esc(b.dataset.kind)}">Envoyer une demande</button>`;
+    openModal('genericModal');
+    bindProActions(b.dataset.kind);
+  });
+}
+
+/* Formulaire de demande (conseil, service, personnalisation) */
+function requestModal(opts){
+  $('#genericBody').innerHTML = `
+    <span class="eyebrow">Nouvelle demande</span>
+    <h2 style="margin-bottom:6px">${esc(opts.title)}</h2>
+    <p class="muted" style="font-size:.92rem">Décrivez votre besoin : la personne concernée vous répondra depuis la messagerie DZCouture.</p>
+    <form id="reqForm">
+      <div class="form-row"><div class="field"><label>Votre demande</label>
+        <textarea class="input" name="message" required placeholder="Robe pour un mariage, transformation d'une pièce, conseil couleurs…"></textarea></div></div>
+      <div class="form-row form-row--2">
+        <div class="field"><label>Budget indicatif (DZD)</label><input class="input" type="number" name="budget"></div>
+        <div class="field"><label>Date de l'événement</label><input class="input" type="date" name="event_date"></div>
+      </div>
+      <button class="btn btn--primary btn--block" type="submit">Envoyer ma demande</button>
+    </form>`;
+  openModal('genericModal');
+  $('#reqForm').onsubmit = async e => {
+    e.preventDefault();
+    const fd = new FormData(e.target);
+    try{
+      await DB.createRequest({
+        provider_id: opts.provider_id || null,
+        product_id: ONLINE ? (opts.product_id || null) : null,
+        type: opts.type || 'custom',
+        title: opts.title,
+        message: fd.get('message'),
+        budget: fd.get('budget') || null,
+        event_date: fd.get('event_date') || null
+      });
+      if(opts.provider_id){ try{ await DB.startConversation(opts.provider_id, opts.title); }catch(err){} }
+      closeModal($('#genericModal'));
+      toast('Demande envoyée. Suivez-la dans « Mes demandes ».');
+    }catch(err){ toast(err.message || 'Envoi impossible.','err'); }
+  };
+}
+
+/* ==========================================================================
+   14. INTERACTIONS DE L'ESPACE PERSONNEL
+   ========================================================================== */
+function bindDashboard(sub){
+
+  /* --- Garde-robe --- */
+  const addBtn = $('#addItemBtn');
+  if(addBtn) addBtn.onclick = () => $('#wardrobeForm').classList.toggle('hidden');
+  const wf = $('#wardrobeForm');
+  if(wf) wf.onsubmit = async e => {
+    e.preventDefault();
+    const fd = new FormData(wf);
+    const file = wf.querySelector('[name=photo]').files[0];
+    try{
+      const photo_url = file ? await upload('wardrobe', file) : null;
+      await DB.addWardrobeItem({
+        name:fd.get('name'), category:fd.get('category'), color:fd.get('color'), size:fd.get('size'),
+        brand:fd.get('brand'), season:fd.get('season'), occasion:fd.get('occasion'),
+        description:fd.get('description'), photo_url
+      });
+      toast('Pièce ajoutée.'); render();
+    }catch(err){ toast(err.message,'err'); }
+  };
+  $$('[data-del-item]').forEach(b => b.onclick = async () => {
+    await DB.removeWardrobeItem(b.dataset.delItem); toast('Pièce retirée.'); render();
+  });
+  $$('[data-wcat]').forEach(c => c.onclick = () => {
+    $$('[data-wcat]').forEach(x=>x.classList.remove('on')); c.classList.add('on');
+    const v = c.dataset.wcat;
+    $$('#wardrobeGrid .card').forEach(card => card.style.display = (!v || card.dataset.wc===v) ? '' : 'none');
+  });
+
+  /* --- Capsule --- */
+  const capBtn = $('#addCapsuleBtn');
+  if(capBtn) capBtn.onclick = () => $('#capsuleForm').classList.toggle('hidden');
+  const cf2 = $('#capsuleForm');
+  if(cf2) cf2.onsubmit = async e => {
+    e.preventDefault();
+    const fd = new FormData(cf2);
+    const cap = await DB.capsule();
+    await DB.addCapsuleItem(cap.id, { label:fd.get('label'), category:fd.get('category') });
+    toast('Élément ajouté à la capsule.'); render();
+  };
+  $$('[data-del-capsule]').forEach(b => b.onclick = async () => {
+    await DB.removeCapsuleItem(b.dataset.delCapsule); render();
+  });
+
+  /* --- Demandes : réponse du professionnel --- */
+  $$('[data-req-accept]').forEach(b => b.onclick = async () => {
+    await DB.updateRequest(b.dataset.reqAccept, { status:'accepted' }); toast('Demande acceptée.'); render();
+  });
+  $$('[data-req-refuse]').forEach(b => b.onclick = async () => {
+    await DB.updateRequest(b.dataset.reqRefuse, { status:'refused' }); toast('Demande refusée.'); render();
+  });
+
+  /* --- Messagerie --- */
+  if(sub === 'messages'){
+    let current = null;
+    const openConv = async id => {
+      current = id;
+      $$('.chat__conv').forEach(c=>c.classList.toggle('on', c.dataset.conv===id));
+      const msgs = await DB.messages(id);
+      const box = $('#chatMsgs');
+      box.innerHTML = msgs.length ? msgs.map(m=>`
+        <div class="bubble ${m.sender_id===(S.user&&S.user.id)||m.sender_id==='demo'?'me':''}">
+          ${esc(m.body)}<small>${dateFr(m.created_at)}</small></div>`).join('')
+        : `<p class="muted" style="margin:auto">Aucun message. Écrivez le premier.</p>`;
+      box.scrollTop = box.scrollHeight;
+    };
+    $$('.chat__conv').forEach(c => c.onclick = () => openConv(c.dataset.conv));
+    const first = $('.chat__conv'); if(first) openConv(first.dataset.conv);
+    const form = $('#chatForm');
+    if(form) form.onsubmit = async e => {
+      e.preventDefault();
+      if(!current) return;
+      const body = e.target.body.value.trim(); if(!body) return;
+      try{ await DB.sendMessage(current, body); e.target.reset(); openConv(current); }
+      catch(err){ toast(err.message,'err'); }
+    };
+  }
+
+  /* --- Profil --- */
+  const pf = $('#profileForm');
+  if(pf) pf.onsubmit = async e => {
+    e.preventDefault();
+    const fd = new FormData(pf);
+    const file = pf.querySelector('[name=avatar]').files[0];
+    const patch = { full_name:fd.get('full_name'), display_name:fd.get('display_name'),
+                    phone:fd.get('phone'), city:fd.get('city'), bio:fd.get('bio') };
+    try{
+      if(file){ const url = await upload('avatars', file); if(url) patch.avatar_url = url; }
+      await DB.saveProfile(patch); toast('Profil enregistré.'); renderHeader(); render();
+    }catch(err){ toast(err.message,'err'); }
+  };
+
+  const pwf = $('#passwordForm');
+  if(pwf) pwf.onsubmit = async e => {
+    e.preventDefault();
+    if(!ONLINE){ toast('Mode démonstration : mot de passe non modifié.'); return; }
+    const { error } = await sb.auth.updateUser({ password: new FormData(pwf).get('password') });
+    if(error) toast(error.message,'err'); else { pwf.reset(); toast('Mot de passe mis à jour.'); }
+  };
+
+  /* --- Profil professionnel --- */
+  const prof = $('#proForm');
+  if(prof) prof.onsubmit = async e => {
+    e.preventDefault();
+    const fd = new FormData(prof);
+    const patch = {};
+    fd.forEach((v,k)=>{
+      if(['specialties','services_types','fabric_types','materials','accessories'].includes(k))
+        patch[k] = String(v).split(',').map(s=>s.trim()).filter(Boolean);
+      else if(['experience_years','price_from','price_to'].includes(k)) patch[k] = v ? Number(v) : null;
+      else patch[k] = v;
+    });
+    try{ await DB.saveProDetails(prof.dataset.table, patch); toast('Profil professionnel enregistré.'); }
+    catch(err){ toast(err.message,'err'); }
+  };
+
+  const avf = $('#availForm');
+  if(avf) avf.onsubmit = async e => {
+    e.preventDefault();
+    try{ await DB.saveProDetails(avf.dataset.table, { availability:new FormData(avf).get('availability') });
+         toast('Disponibilité mise à jour.'); }
+    catch(err){ toast(err.message,'err'); }
+  };
+
+  /* --- Services --- */
+  const sBtn = $('#addServiceBtn');
+  if(sBtn) sBtn.onclick = () => $('#serviceForm').classList.toggle('hidden');
+  const sf = $('#serviceForm');
+  if(sf){
+    const listServices = async () => {
+      let rows = [];
+      if(ONLINE){ const { data } = await sb.from('services').select('*').eq('provider_id',S.user.id).order('created_at',{ascending:false}); rows = data||[]; }
+      else rows = LS.get('services',[]);
+      $('#servicesList').innerHTML = rows.length ? rows.map(s=>`
+        <div class="list-item"><div class="list-item__main"><b>${esc(s.title)}</b>
+          <small>${esc(s.category||'')}${s.price_from?' · à partir de '+money(s.price_from):''}${s.duration?' · '+esc(s.duration):''}</small>
+          <p class="muted" style="font-size:.88rem;margin:4px 0 0">${esc(s.description||'')}</p></div>
+          <button class="btn btn--ghost btn--sm" data-del-service="${esc(s.id)}">Retirer</button></div>`).join('')
+        : `<div class="empty"><p class="muted">Aucun service publié. Décrivez ce que vous proposez pour être trouvée par les clientes.</p></div>`;
+      $$('[data-del-service]').forEach(b => b.onclick = async () => {
+        if(ONLINE) await sb.from('services').delete().eq('id',b.dataset.delService);
+        else LS.set('services', LS.get('services',[]).filter(x=>x.id!==b.dataset.delService));
+        listServices();
+      });
+    };
+    listServices();
+    sf.onsubmit = async e => {
+      e.preventDefault();
+      const fd = new FormData(sf);
+      const row = { title:fd.get('title'), category:fd.get('category'), description:fd.get('description'),
+                    price_from: fd.get('price_from') ? Number(fd.get('price_from')) : null, duration:fd.get('duration') };
+      try{
+        if(ONLINE){ const { error } = await sb.from('services').insert(Object.assign({provider_id:S.user.id},row)); if(error) throw error; }
+        else { const l = LS.get('services',[]); l.unshift(Object.assign({id:'s'+Date.now()},row)); LS.set('services',l); }
+        sf.reset(); sf.classList.add('hidden'); toast('Service enregistré.'); listServices();
+      }catch(err){ toast(err.message,'err'); }
+    };
+  }
+
+  /* --- Portfolio --- */
+  const pof = $('#portfolioForm');
+  if(pof){
+    const table = (S.profile.role==='stylist') ? 'stylists' : 'seamstresses';
+    const paint = async () => {
+      const d = await DB.proDetails(table);
+      const items = d.portfolio || [];
+      $('#portfolioGrid').innerHTML = items.length ? items.map((x,i)=>`
+        <div class="card"><div class="card__media">${x.url?`<img src="${esc(x.url)}" alt="${esc(x.title||'')}">`:silhouette({})}</div>
+          <div class="card__body"><b>${esc(x.title||'Réalisation')}</b>
+          <button class="btn btn--ghost btn--sm" data-del-port="${i}" style="margin-top:8px">Retirer</button></div></div>`).join('')
+        : `<p class="muted" style="grid-column:1/-1">Aucune réalisation pour l'instant.</p>`;
+      $$('[data-del-port]').forEach(b => b.onclick = async () => {
+        const arr = items.slice(); arr.splice(Number(b.dataset.delPort),1);
+        await DB.saveProDetails(table, { portfolio:arr }); paint();
+      });
+    };
+    paint();
+    pof.onsubmit = async e => {
+      e.preventDefault();
+      const fd = new FormData(pof);
+      const file = pof.querySelector('[name=image]').files[0];
+      try{
+        const url = file ? await upload('portfolios', file) : null;
+        const d = await DB.proDetails(table);
+        const arr = (d.portfolio||[]).concat({ title:fd.get('title'), url, alt:fd.get('title') });
+        await DB.saveProDetails(table, { portfolio:arr });
+        pof.reset(); toast('Réalisation ajoutée.'); paint();
+      }catch(err){ toast(err.message,'err'); }
+    };
+  }
+
+  /* --- Produits fournisseur --- */
+  const prBtn = $('#addProductBtn');
+  if(prBtn) prBtn.onclick = () => $('#productForm').classList.toggle('hidden');
+  const prf = $('#productForm');
+  if(prf) prf.onsubmit = async e => {
+    e.preventDefault();
+    const fd = new FormData(prf);
+    const row = {
+      name: fd.get('name'), slug: slugify(fd.get('name'))+'-'+Date.now().toString(36),
+      description: fd.get('description'), price: Number(fd.get('price')||0),
+      material: fd.get('material'),
+      colors: String(fd.get('colors')||'').split(',').map(s=>s.trim()).filter(Boolean),
+      status: 'pending'
+    };
+    try{
+      if(ONLINE){
+        const { data:sup } = await sb.from('suppliers').select('id').eq('profile_id',S.user.id).limit(1);
+        row.supplier_id = sup && sup[0] ? sup[0].id : null;
+        row.creator_id = S.user.id;
+        const { error } = await sb.from('products').insert(row); if(error) throw error;
+      } else {
+        const l = LS.get('my_products',[]); l.unshift(Object.assign({id:'mp'+Date.now()},row)); LS.set('my_products',l);
+      }
+      toast('Produit enregistré — il sera visible après validation.'); render();
+    }catch(err){ toast(err.message,'err'); }
+  };
+
+  const cataf = $('#catalogForm');
+  if(cataf) cataf.onsubmit = async e => {
+    e.preventDefault();
+    const file = cataf.querySelector('[name=catalog]').files[0];
+    if(!file) return toast('Choisissez un fichier.','err');
+    const url = await upload('portfolios', file);
+    if(url){ await DB.saveProDetails('suppliers', { catalog_url:url }); toast('Catalogue envoyé.'); }
+  };
+}
+
+/* ==========================================================================
+   15. APPARITION PROGRESSIVE
+   ========================================================================== */
+let revealObserver;
+function observeReveal(){
+  if(!('IntersectionObserver' in window)){ $$('.reveal,.flow__step').forEach(e=>e.classList.add('in')); return; }
+  if(revealObserver) revealObserver.disconnect();
+  revealObserver = new IntersectionObserver(entries => {
+    entries.forEach(en => { if(en.isIntersecting){ en.target.classList.add('in'); revealObserver.unobserve(en.target); } });
+  }, { threshold:.12, rootMargin:'0px 0px -40px' });
+  $$('.reveal, .flow__step').forEach(e => revealObserver.observe(e));
+}
+
+/* ==========================================================================
+   16. INITIALISATION
+   ========================================================================== */
+$('#burger').onclick = () => $('#nav').classList.toggle('open');
+window.addEventListener('scroll', () => $('#header').classList.toggle('scrolled', window.scrollY > 20));
+$('#footJoin').onclick = e => { e.preventDefault(); Auth.open('signup'); };
+
+/* Modale d'authentification */
+$$('#authModal .tabs button').forEach(b => b.onclick = () => Auth.tab(b.dataset.tab));
+$$('#roleGrid .role').forEach(r => r.onclick = () => {
+  $$('#roleGrid .role').forEach(x=>x.classList.remove('on'));
+  r.classList.add('on');
+  Auth.selectedRole = r.dataset.role;
+  $('#companyRow').style.display = r.dataset.role === 'supplier' ? '' : 'none';
+  $('#roleNote').textContent = r.dataset.role === 'client'
+    ? "Votre espace client est accessible immédiatement après l'inscription."
+    : "Les comptes professionnels sont vérifiés par l'équipe DZCouture avant publication.";
+});
+$('#loginForm').onsubmit  = e => { e.preventDefault(); Auth.login(e.target); };
+$('#signupForm').onsubmit = e => { e.preventDefault(); Auth.signup(e.target); };
+$('#forgotLink').onclick  = e => {
+  e.preventDefault();
+  const email = $('#loginForm').email.value;
+  if(!email) return toast('Saisissez d\'abord votre email.','err');
+  Auth.forgot(email);
+};
+
+/* Réaction aux changements de session Supabase (connexion, déconnexion, refresh) */
+if(ONLINE){
+  sb.auth.onAuthStateChange(async (event) => {
+    if(event === 'SIGNED_IN' || event === 'TOKEN_REFRESHED') await Auth.loadSession();
+    if(event === 'SIGNED_OUT'){ S.user = null; S.profile = null; renderHeader(); }
+  });
+}
+
+(async function init(){
+  try{ await DB.loadSettings(); }catch(e){ console.warn(e); }
+  applyTheme();
+  try{ await Auth.loadSession(); }catch(e){ console.warn(e); renderHeader(); }
+  await Promise.all([DB.categories(), DB.collections()]);
+  if(!location.hash) location.hash = '#/';
+  await render();
+  if(!ONLINE){
+    setTimeout(()=>toast('Mode démonstration : renseignez vos clés Supabase en haut du fichier pour activer les comptes réels.'), 1200);
+  }
+})();
+</script>
+</body>
+</html>
