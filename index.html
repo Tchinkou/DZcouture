@@ -151,6 +151,14 @@ p{margin:0 0 1em}
 .nav a:hover{opacity:1;color:var(--grenat)}
 .nav a.active{color:var(--grenat);opacity:1}
 .nav a.active::after{content:"";position:absolute;left:.62em;right:.62em;bottom:.15em;height:1px;background:var(--gold)}
+.nav__group{position:relative}
+.nav__group>a::after{content:"▾";margin-left:.35em;font-size:.7em;opacity:.7}
+.nav__drop{position:absolute;top:100%;left:0;background:var(--surface);border:1px solid var(--line-gold);
+  border-radius:10px;padding:6px;min-width:180px;box-shadow:0 14px 36px rgba(23,19,21,.12);
+  display:none;flex-direction:column;z-index:50}
+.nav__drop a{padding:.6em .8em;font-size:.78rem;letter-spacing:.04em;text-transform:none;border-radius:8px;opacity:.85}
+.nav__drop a:hover{background:rgba(201,162,39,.1);opacity:1}
+.nav__group:hover .nav__drop,.nav__group.open .nav__drop{display:flex}
 .header__actions{display:flex;align-items:center;gap:10px;flex:0 0 auto}
 .nav__auth{display:none;gap:10px;margin-top:14px;padding-top:14px;border-top:1px solid var(--line)}
 .burger{display:none;background:none;border:1px solid var(--line-gold);border-radius:10px;padding:9px 10px;cursor:pointer}
@@ -470,6 +478,9 @@ textarea.input{min-height:120px;resize:vertical}
        flex-direction:column;padding:16px 24px 24px;border-bottom:1px solid var(--line);box-shadow:var(--shadow-md);gap:2px}
   .nav.open{display:flex}
   .nav a{padding:.8em 0;font-size:.88rem}
+  .nav__drop{position:static;display:none;box-shadow:none;border:none;padding:0 0 0 14px;min-width:0}
+  .nav__group:hover .nav__drop{display:none}
+  .nav__group.open .nav__drop{display:flex}
   .nav__auth{display:flex}
   .nav__auth .btn{flex:1;padding:.8em 1em}
   .burger{display:block;order:3}
@@ -551,10 +562,15 @@ textarea.input{min-height:120px;resize:vertical}
       <a href="#/collections">Collections</a>
       <a href="#/innovation">Innovation</a>
       <a href="#/vetements">Vêtements</a>
-      <a href="#/couturieres">Couturières</a>
-      <a href="#/stylistes">Stylistes</a>
-      <a href="#/fournisseurs">Fournisseurs</a>
-      <a href="#/ateliers">Ateliers</a>
+      <div class="nav__group" id="navPros">
+        <a href="#" id="navProsTrigger">Professionnels</a>
+        <div class="nav__drop">
+          <a href="#/couturieres">Couturières</a>
+          <a href="#/stylistes">Stylistes</a>
+          <a href="#/fournisseurs">Fournisseurs</a>
+          <a href="#/ateliers">Ateliers</a>
+        </div>
+      </div>
       <a href="#/vip">VIP</a>
       <a href="#/videos">Vidéos</a>
       <a href="#/contact">Contact</a>
@@ -3030,6 +3046,8 @@ function observeReveal(){
    16. INITIALISATION
    ========================================================================== */
 $('#burger').onclick = () => $('#nav').classList.toggle('open');
+$('#navProsTrigger').onclick = e => { e.preventDefault(); $('#navPros').classList.toggle('open'); };
+document.addEventListener('click', e => { if(!e.target.closest('#navPros')) $('#navPros').classList.remove('open'); });
 window.addEventListener('scroll', () => $('#header').classList.toggle('scrolled', window.scrollY > 20));
 $('#footJoin').onclick = e => { e.preventDefault(); Auth.open('signup'); };
 
