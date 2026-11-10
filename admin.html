@@ -971,7 +971,7 @@ function formModal(key, row){
       const el = $('#f_' + f.k);
       if(!el) continue;
       if(f.type === 'bool') out[f.k] = el.checked;
-      else if(f.type === 'number') out[f.k] = el.value === '' ? null : Number(el.value);
+      else if(f.type === 'number'){ if(el.value !== '') out[f.k] = Number(el.value); }
       else if(f.type === 'tags') out[f.k] = el.value.split(',').map(s=>s.trim()).filter(Boolean);
       else if(f.type === 'json'){ try{ out[f.k] = JSON.parse(el.value||'{}'); }catch(err){ toast('JSON invalide : '+f.label,'err'); throw err; } }
       else if(f.type === 'image'){
