@@ -605,7 +605,6 @@ textarea.input{min-height:120px;resize:vertical}
     </div>
     <div class="footer__bottom">
       <span>© <span id="year">2026</span> DZCouture — Béjaïa, Algérie. Tous droits réservés.</span>
-      <span class="muted">Site de démonstration — les professionnels et produits affichés sont fictifs.</span>
     </div>
   </div>
 </footer>
@@ -1425,7 +1424,6 @@ function productCard(p){
       <div class="card__badges">
         ${p.is_modular?'<span class="tag tag--gold">Modulable</span>':''}
         ${p.is_couture?'<span class="tag">Haute couture</span>':''}
-        ${p.is_demo?'<span class="tag tag--demo">Démo</span>':''}
       </div>
       <button class="fav ${fav?'on':''}" data-fav="${esc(p.id)}" aria-label="Ajouter aux favoris">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5A0F24" stroke-width="1.6">
@@ -1490,12 +1488,7 @@ function pageHead(eyebrow, title, lead){
   </section>`;
 }
 
-const demoBanner = `<div class="wrap" style="margin-bottom:26px"><div class="demo-note">
-  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="flex:0 0 auto">
-    <circle cx="12" cy="12" r="9"/><path d="M12 8h.01M11 12h1v4h1"/></svg>
-  <span><b>Données de démonstration.</b> Les pièces présentées servent à illustrer le fonctionnement de la plateforme ;
-  aucun professionnel réel n'est répertorié tant que les comptes ne sont pas créés et validés.</span>
-</div></div>`;
+const demoBanner = '';
 
 /* ==========================================================================
    9. VUES PUBLIQUES
@@ -1747,7 +1740,7 @@ Views.produit = async (params) => {
     <div class="product" style="margin-top:22px">
       <div class="product__media" id="pMedia">${silhouette({})}</div>
       <div>
-        <span class="eyebrow">${esc(cat)}${p.is_demo?' · Donnée de démonstration':''}</span>
+        <span class="eyebrow">${esc(cat)}</span>
         <h1 style="font-size:clamp(2rem,3.6vw,3rem);margin-bottom:6px">${esc(p.name)}</h1>
         <div class="chips" style="margin-bottom:16px">
           ${p.is_modular?'<span class="tag tag--gold">Modulable</span>':''}
@@ -1796,7 +1789,6 @@ Views.produit = async (params) => {
           <div>Tailles</div><div>${(p.sizes||[]).map(esc).join(', ')||'—'}</div>
           <div>Caractéristiques</div><div>${(p.features||[]).map(esc).join(' · ')||'—'}</div>
         </div>
-        ${p.is_demo?`<p class="muted" style="font-size:.8rem;margin-top:16px">Pièce de démonstration : le prix et les visuels sont indicatifs.</p>`:''}
       </div>
     </div>
   </div></section>`;
@@ -1837,7 +1829,7 @@ Views.ateliers = async () => {
       <div class="card__media" style="aspect-ratio:4/3">${silhouette({sleeves:true})}</div>
       <div class="card__body">
         <div class="card__meta">${esc(w.city||'Béjaïa')}</div>
-        <h3 class="card__title">${esc(w.name)}${w.is_demo?' <span class="tag tag--demo">Démo</span>':''}</h3>
+        <h3 class="card__title">${esc(w.name)}</h3>
         <p class="muted" style="font-size:.9rem">${esc(w.description||'')}</p>
         <div class="chips">${(w.specialties||[]).map(s=>`<span class="tag">${esc(s)}</span>`).join('')}</div>
       </div></article>`).join('')}
@@ -2598,7 +2590,7 @@ function bindView(route, params){
       });
       if(sort === 'asc')  list = list.slice().sort((a,b)=>a.price-b.price);
       if(sort === 'desc') list = list.slice().sort((a,b)=>b.price-a.price);
-      $('#countLine').textContent = `${list.length} pièce${list.length>1?'s':''} — données de démonstration incluses.`;
+      $('#countLine').textContent = `${list.length} pièce${list.length>1?'s':''}`;
       $('#productGrid').innerHTML = list.length ? list.map(productCard).join('')
         : `<div class="empty" style="grid-column:1/-1"><h3>Aucune pièce ne correspond</h3><p class="muted">Modifiez vos filtres.</p></div>`;
       bindView('__cards__', {});
